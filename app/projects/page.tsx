@@ -5,16 +5,8 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
+import { projects } from '@/projects/data'
 import { useState } from 'react'
-
-// Mock data for projects
-const projects = Array.from({ length: 365 }, (_, i) => ({
-  id: i + 1,
-  name: `Project ${i + 1}`,
-  description: `Description for Project ${i + 1}`,
-  category: ['Basic', 'Intermediate', 'Advanced'][Math.floor(Math.random() * 3)],
-  image: `/placeholder.svg?height=200&width=300&text=Project+${i + 1}`
-}))
 
 export default function ProjectsPage() {
   const [filter, setFilter] = useState('All')
