@@ -7,37 +7,57 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { useEffect, useState } from "react";
+import { Check, Copy, Github } from "lucide-react";
+import { useEffect, useMemo, useState } from "react";
 
 import { Button } from "@/components/ui/Button";
-import { Github } from "lucide-react";
 import Link from "next/link";
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+// import SyntaxHighlighter from "react-syntax-highlighter/dist/esm/default-highlight";
 import dynamic from "next/dynamic";
 import { getProject } from "@/lib/utils";
+import { oneDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { useParams } from "next/navigation";
+
+// import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
+
+async function getProjectCode(projectId: number) {
+  const response = await fetch(`/api/github/code?projectId=${projectId}`);
+  if (!response.ok) {
+    throw new Error("Failed to fetch code");
+  }
+  const data = await response.json();
+  return data.code;
+}
 
 export default function ProjectDetailPage() {
   const params = useParams();
   const [project, setProject] = useState<any>(null);
+  const [isCopied, setIsCopied] = useState(false);
+  const [code, setCode] = useState<string>("");
 
   useEffect(() => {
-    const loadProject = async () => {
+    const loadData = async () => {
       const data = await getProject(params.id as string);
       setProject(data);
+      const codeData = await getProjectCode(data.id);
+      setCode(codeData);
     };
-    loadProject();
+    loadData();
   }, [params.id]);
 
+  const ProjectComponent = useMemo(() => {
+    return dynamic(
+      () => import(`@/projects/project${project?.id}`),
+      {
+        loading: () => <div>Loading...</div>,
+        ssr: false,
+      }
+    );
+  }, [project?.id]);
+
   if (!project) return <div>Loading...</div>;
-
-  const ProjectComponent = dynamic(
-    () => import(`@/projects/project${project.id}`),
-    {
-      loading: () => <div>Loading...</div>,
-      ssr: false,
-    }
-  );
-
+  
   return (
     <div className="container mx-auto py-12">
       <h1 className="text-3xl font-bold mb-8">{project.name}</h1>
@@ -95,22 +115,46 @@ export default function ProjectDetailPage() {
           <CardTitle>Code Snippet</CardTitle>
         </CardHeader>
         <CardContent>
-          <pre className="p-4 bg-muted rounded-md overflow-x-auto">
-            <code>{project.codeSnippet}</code>
-            <iframe
-              src={`https://codesandbox.io/p/github/abhinandanmishra1/frontend-365/main?embed=1&file=/projects/project${project.id}/index.tsx`}
-              style={{
-                width: "100%",
-                height: "500px",
-                border: "0",
-                borderRadius: "4px",
-                overflow: "hidden",
-              }}
-              title="abhinandanmishra1/frontend-365/main"
-              allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
-              sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
-            ></iframe>
-          </pre>
+          <div className="relative">
+            <pre className="">
+              <SyntaxHighlighter
+                language="tsx"
+                style={oneDark}
+                wrapLines
+                wrapLongLines
+                className="p-4 bg-muted rounded-md overflow-x-auto overflow-y-auto max-h-[500px]"
+              >
+                {code ? code : "Loading..."}
+              </SyntaxHighlighter>
+            </pre>
+            {isCopied ? (
+              <Button
+                variant="ghost"
+                size="icon"
+                className="absolute top-2 right-2"
+                onClick={() => {
+                  navigator.clipboard.writeText(code);
+                }}
+              >
+                <Check className="h-4 w-4 text-green-500" />
+              </Button>
+            ) : (
+              <Button
+                variant="ghost"
+                size="icon"
+                className="absolute top-2 right-2 text-white"
+                onClick={() => {
+                  navigator.clipboard.writeText(code);
+                  setIsCopied(true);
+                  setTimeout(() => {
+                    setIsCopied(false);
+                  }, 2000);
+                }}
+              >
+                <Copy className="h-4 w-4" />
+              </Button>
+            )}
+          </div>
         </CardContent>
       </Card>
     </div>

@@ -4,6 +4,7 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/componen
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
 
 import { Button } from '@/components/ui/Button'
+import Image from 'next/image'
 import Link from 'next/link'
 import { projects } from '@/projects/data'
 import { useState } from 'react'
@@ -41,12 +42,21 @@ export default function ProjectsPage() {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
         {paginatedProjects.map((project) => (
           <Card key={project.id} className="overflow-hidden">
-            <CardHeader className="p-0">
-              <img src={project.image} alt={project.name} className="w-full h-48 object-cover" />
+            <CardHeader className="p-0 h-48 border-b">
+              <Image src={project.image} alt={project.name} width={300} height={200} className="object-cover" />
             </CardHeader>
             <CardContent className="p-4">
-              <CardTitle>{project.name}</CardTitle>
-              <p className="text-sm text-muted-foreground mt-2">{project.description}</p>
+              <div className="flex justify-between items-start mb-2">
+                <CardTitle>{project.name}</CardTitle>
+                <span className="text-xs text-muted-foreground">
+                  {new Date(project.date).toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: 'short',
+                    day: 'numeric'
+                  })}
+                </span>
+              </div>
+              <p className="text-sm text-muted-foreground">{project.description}</p>
             </CardContent>
             <CardFooter>
               <Button asChild className="w-full">

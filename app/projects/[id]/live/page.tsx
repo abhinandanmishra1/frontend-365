@@ -1,17 +1,14 @@
 'use client'
 
+import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
 import dynamic from 'next/dynamic'
-import { projects } from '@/projects/data'
+import { getProject } from '@/lib/utils'
+import { useParams } from 'next/navigation'
 
-interface Props {
-  params: {
-    id: string
-  }
-}
-
-export default function LiveDemoPage({ params }: Props) {
-  const project = projects.find(p => p.id === parseInt(params.id))
+export default async function LiveDemoPage() {
+  const params = useParams()
+  const project = await getProject(params.id as string)
   
   if (!project) {
     return <div>Project not found</div>
@@ -30,15 +27,16 @@ export default function LiveDemoPage({ params }: Props) {
       <div className="max-w-7xl mx-auto">
         <div className="flex justify-between items-center mb-8">
           <h1 className="text-2xl font-bold">{project.name}</h1>
-          <Link 
-            href={`/projects/${project.id}`}
-            className="px-4 py-2 text-sm bg-gray-100 hover:bg-gray-200 rounded-md transition-colors"
-          >
-            ← Back to Details
-          </Link>
+          <Button asChild>
+            <Link 
+              href={`/projects/${project.id}`}
+            >
+              ← Back to Details
+            </Link>
+          </Button>
         </div>
         
-        <div className="p-8 border rounded-lg bg-white shadow-sm">
+        <div className="p-8 border rounded-lg bg-card shadow-sm">
           <ProjectComponent />
         </div>
       </div>

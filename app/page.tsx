@@ -13,7 +13,7 @@ export default function Home() {
         </p>
         <Button asChild size="lg">
           <Link href="/projects">
-            Explore Components
+            Explore Projects
           </Link>
         </Button>
       </div>
