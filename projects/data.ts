@@ -5,6 +5,7 @@ export interface Project {
   date: string;
   category: string;
   image: string;
+  resources: string[];
   features: string[];
   tags: string[];
   technologies: string[];
@@ -16,11 +17,15 @@ export const projects: Project[] = [
   {
     id: 1,
     name: "Animated Button",
-    description: "A beautiful button component with hover animations",
-    date: "2024-12-31",
+    description: "Beautiful animated button components with hover animations",
+    date: "2025-01-01",
     category: "Basic",
     features: ["animation", "button", "interaction"],
     technologies: ["React", "TailwindCSS", "JavaScript"],
+    resources: [
+      "https://prismic.io/blog/css-button-animations",
+      "https://www.joshwcomeau.com/animation/css-transitions/"
+    ],
     image: "https://abhicdn.netlify.app/images/frontend-365-project1.png",
     tags: ["animation", "button", "interaction"],
     component: "animated-button",
