@@ -13,13 +13,10 @@ import { useEffect, useMemo, useState } from "react";
 import { Button } from "@/components/ui/Button";
 import Link from "next/link";
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-// import SyntaxHighlighter from "react-syntax-highlighter/dist/esm/default-highlight";
 import dynamic from "next/dynamic";
 import { getProject } from "@/lib/utils";
 import { oneDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { useParams } from "next/navigation";
-
-// import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 async function getProjectCode(projectId: number) {
   const response = await fetch(`/api/github/code?projectId=${projectId}`);
@@ -67,7 +64,7 @@ export default function ProjectDetailPage() {
             <CardTitle>Project Details</CardTitle>
             <CardDescription>{project.description}</CardDescription>
           </CardHeader>
-          <CardContent>
+          <CardContent className="h-[400px] overflow-y-auto">
             <h3 className="font-semibold mb-2">Features:</h3>
             <ul className="list-disc list-inside mb-4">
               {project.features.map((feature: string, index: number) => (
@@ -75,11 +72,23 @@ export default function ProjectDetailPage() {
               ))}
             </ul>
             <h3 className="font-semibold mb-2">Technologies Used:</h3>
-            <ul className="list-disc list-inside">
+            <ul className="list-disc list-inside mb-4">
               {project.technologies.map((tech: string, index: number) => (
                 <li key={index}>{tech}</li>
               ))}
             </ul>
+
+            <h3 className="font-semibold mb-2">Resources:</h3>
+            <ul className="list-disc list-inside">
+              {project.resources.map((resource: string, index: number) => (
+                <li key={index}>
+                  <a href={resource} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-700">
+                    {resource}
+                  </a>
+                </li>
+              ))}
+            </ul>
+            
           </CardContent>
         </Card>
         <Card>
