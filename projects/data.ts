@@ -5,6 +5,7 @@ export interface Project {
   date: string;
   category: string;
   image: string;
+  resources: string[];
   features: string[];
   tags: string[];
   technologies: string[];
@@ -16,15 +17,49 @@ export const projects: Project[] = [
   {
     id: 1,
     name: "Animated Button",
-    description: "A beautiful button component with hover animations",
-    date: "2024-12-31",
+    description: "Beautiful animated button components with hover animations",
+    date: "2025-01-01",
     category: "Basic",
     features: ["animation", "button", "interaction"],
     technologies: ["React", "TailwindCSS", "JavaScript"],
+    resources: [
+      "https://prismic.io/blog/css-button-animations",
+      "https://www.joshwcomeau.com/animation/css-transitions/"
+    ],
     image: "https://abhicdn.netlify.app/images/frontend-365-project1.png",
     tags: ["animation", "button", "interaction"],
     component: "animated-button",
   },
+  {
+    id: 2,
+    name: "Custom Checkbox",
+    description: "Custom checkbox with custom colors and disabled state, accessible in forced colors mode as well.",
+    date: "2025-01-02",
+    category: "Basic",
+    component: "project2",
+    image: "https://abhicdn.netlify.app/images/frontend-365-project2.png",
+    resources: [
+      "https://moderncss.dev/pure-css-custom-checkbox-style/",
+      "https://css-tricks.com/almanac/properties/b/box-shadow/",
+      "https://www.youtube.com/watch?v=-JNRQ5HjNeI",
+      "https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow",
+      "https://www.youtube.com/watch?v=yYGLEy7CiT0",
+      "https://polypane.app/blog/forced-colors-explained-a-practical-guide/"
+    ],
+    features: [
+      "Custom Checkbox with better look",
+      "Good for accessibility and forced colors mode",
+      "Changes state on enter key press",
+      "Disabled state with cursor not allowed",
+      "Custom color for label and checked checkbox",
+    ],
+    tags: [],
+    technologies: [
+      "React",
+      "Styled Components",
+    ],
+  },
   // Add more projects here as you create them
 ];
+
 
