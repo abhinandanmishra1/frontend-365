@@ -4,6 +4,9 @@ const nextConfig = {
   images: {
     domains: ['abhicdn.netlify.app'],
   },
+  compiler: {
+    styledComponents: true,
+  },
 }
 
 module.exports = nextConfig

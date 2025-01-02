@@ -3,6 +3,7 @@ import './globals.css'
 import Footer from '@/components/footer'
 import Header from '@/components/header'
 import { Inter } from 'next/font/google'
+import StyledComponentsRegistry from '@/lib/registry'
 import { ThemeProvider } from "@/components/theme-provider"
 
 const inter = Inter({ subsets: ['latin'] })
@@ -23,7 +24,9 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <div className="flex flex-col min-h-screen">
             <Header />
-            <main className="flex-grow">{children}</main>
+            <main className="flex-grow">
+              <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+            </main>
             <Footer />
           </div>
         </ThemeProvider>
