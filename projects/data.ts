@@ -59,7 +59,31 @@ export const projects: Project[] = [
       "Styled Components",
     ],
   },
+  {
+    id: 3,
+    name: "Toggle Switch",
+    description: "Custom toggle switch with custom colors and disabled state, accessible in forced colors mode as well.",
+    date: "2025-01-03",
+    category: "Basic",
+    component: "project3",
+    image: "https://abhicdn.netlify.app/images/frontend-365-project3.png",
+    resources: [
+      "https://moderncss.dev/pure-css-custom-radio-button-style/",
+      "https://css-tricks.com/the-checkbox-showdown/"
+    ],
+    features: [
+      "Toggle switch with custom colors and disabled state, accessible in forced colors mode as well.",
+      "Changes state on enter key press",
+      "Disabled state with cursor not allowed",
+      "Custom color for label and checked toggle switch",
+      "Text for checked and unchecked state",
+    ],
+    tags: [],
+    technologies: [
+      "React",
+      "Styled Components",
+    ],
+  }
   // Add more projects here as you create them
 ];
-
 
