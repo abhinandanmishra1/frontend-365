@@ -68,8 +68,6 @@ export const projects: Project[] = [
     component: "project3",
     image: "https://abhicdn.netlify.app/images/frontend-365-project3.png",
     resources: [
-      "https://moderncss.dev/pure-css-custom-radio-button-style/",
-      "https://css-tricks.com/the-checkbox-showdown/"
     ],
     features: [
       "Toggle switch with custom colors and disabled state, accessible in forced colors mode as well.",
@@ -83,7 +81,28 @@ export const projects: Project[] = [
       "React",
       "Styled Components",
     ],
+  },
+  {
+    id: 4,
+    name: "Accordion Menu",
+    description: "Accordion menu with multiple open and single open features",
+    date: "2025-01-04",
+    category: "Basic",
+    component: "project4",
+    image: "https://abhicdn.netlify.app/images/frontend-365-project4.png",
+    resources: [
+      "https://elfsight.com/accordion-faq-widget/examples/",
+    ],
+    features: [
+      "Accordion menu with multiple open and single open features",
+      "Dynamic component, responsive and accessible",
+    ],
+    tags: [],
+    technologies: [
+      "React",
+      "TailwindCSS",
+    ],
   }
-  // Add more projects here as you create them
 ];
+
 
