@@ -56,7 +56,7 @@ export default function ProjectsPage() {
                   })}
                 </span>
               </div>
-              <p className="text-sm text-muted-foreground">{project.description}</p>
+              <p className="text-sm text-muted-foreground line-clamp-1">{project.description}</p>
             </CardContent>
             <CardFooter>
               <Button asChild className="w-full">
