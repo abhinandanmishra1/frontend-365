@@ -24,7 +24,7 @@ export const projects: Project[] = [
     technologies: ["React", "TailwindCSS", "JavaScript"],
     resources: [
       "https://prismic.io/blog/css-button-animations",
-      "https://www.joshwcomeau.com/animation/css-transitions/"
+      "https://www.joshwcomeau.com/animation/css-transitions/",
     ],
     image: "https://abhicdn.netlify.app/images/frontend-365-project1.png",
     tags: ["animation", "button", "interaction"],
@@ -33,7 +33,8 @@ export const projects: Project[] = [
   {
     id: 2,
     name: "Custom Checkbox",
-    description: "Custom checkbox with custom colors and disabled state, accessible in forced colors mode as well.",
+    description:
+      "Custom checkbox with custom colors and disabled state, accessible in forced colors mode as well.",
     date: "2025-01-02",
     category: "Basic",
     component: "project2",
@@ -44,7 +45,7 @@ export const projects: Project[] = [
       "https://www.youtube.com/watch?v=-JNRQ5HjNeI",
       "https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow",
       "https://www.youtube.com/watch?v=yYGLEy7CiT0",
-      "https://polypane.app/blog/forced-colors-explained-a-practical-guide/"
+      "https://polypane.app/blog/forced-colors-explained-a-practical-guide/",
     ],
     features: [
       "Custom Checkbox with better look",
@@ -54,21 +55,18 @@ export const projects: Project[] = [
       "Custom color for label and checked checkbox",
     ],
     tags: [],
-    technologies: [
-      "React",
-      "Styled Components",
-    ],
+    technologies: ["React", "Styled Components"],
   },
   {
     id: 3,
     name: "Toggle Switch",
-    description: "Custom toggle switch with custom colors and disabled state, accessible in forced colors mode as well.",
+    description:
+      "Custom toggle switch with custom colors and disabled state, accessible in forced colors mode as well.",
     date: "2025-01-03",
     category: "Basic",
     component: "project3",
     image: "https://abhicdn.netlify.app/images/frontend-365-project3.png",
-    resources: [
-    ],
+    resources: [],
     features: [
       "Toggle switch with custom colors and disabled state, accessible in forced colors mode as well.",
       "Changes state on enter key press",
@@ -77,10 +75,7 @@ export const projects: Project[] = [
       "Text for checked and unchecked state",
     ],
     tags: [],
-    technologies: [
-      "React",
-      "Styled Components",
-    ],
+    technologies: ["React", "Styled Components"],
   },
   {
     id: 4,
@@ -90,19 +85,31 @@ export const projects: Project[] = [
     category: "Basic",
     component: "project4",
     image: "https://abhicdn.netlify.app/images/frontend-365-project4.png",
-    resources: [
-      "https://elfsight.com/accordion-faq-widget/examples/",
-    ],
+    resources: ["https://elfsight.com/accordion-faq-widget/examples/"],
     features: [
       "Accordion menu with multiple open and single open features",
       "Dynamic component, responsive and accessible",
     ],
     tags: [],
-    technologies: [
-      "React",
-      "TailwindCSS",
+    technologies: ["React", "TailwindCSS"],
+  },
+  {
+    id: 5,
+    name: "Responsive Navbar",
+    description: "Dynamic Responsive navbar with sticky ability",
+    date: "2025-01-05",
+    category: "Basic",
+    component: "project5",
+    image: "https://abhicdn.netlify.app/images/frontend-365-project5.png",
+    resources: [
+      "https://flowbite.com/docs/components/navbar/",
     ],
-  }
+    features: [
+      "Responsive navbar with sticky ability",
+      "It's a dynamic component and can be used in any project",
+      "Compatible with both dark and light modes",
+    ],
+    tags: [],
+    technologies: ["React", "TailwindCSS"],
+  },
 ];
-
-
