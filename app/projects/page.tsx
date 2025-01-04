@@ -6,6 +6,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Button } from '@/components/ui/Button'
 import Image from 'next/image'
 import Link from 'next/link'
+import { cn } from '@/lib/utils'
 import { projects } from '@/projects/data'
 import { useState } from 'react'
 
@@ -42,8 +43,12 @@ export default function ProjectsPage() {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
         {paginatedProjects.map((project) => (
           <Card key={project.id} className="overflow-hidden">
-            <CardHeader className="p-0 h-48 border-b">
-              <Image src={project.image} alt={project.name} width={300} height={200} className="object-cover" />
+            <CardHeader style={{
+              backgroundImage: `url(${project.image})`,
+              backgroundSize: '300px 150px',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat'
+            }} className={cn(`p-0 h-48 border-b`)}>
             </CardHeader>
             <CardContent className="p-4">
               <div className="flex justify-between items-start mb-2">
