@@ -129,5 +129,23 @@ export const projects: Project[] = [
     ],
     tags: [],
     technologies: ["React", "TailwindCSS"],
+  },
+  {
+    id: 7,
+    name: "Tooltip",
+    description: "Tooltip with custom colors and content features",
+    date: "2025-01-07",
+    category: "Basic",
+    component: "project7",
+    image: "https://abhicdn.netlify.app/images/frontend-365-project7.png",
+    resources: [
+      "https://uiverse.io/tooltips",
+    ],
+    features: [
+      "Tooltip of different types like info, success, warning and error",
+      "Can add custom content in the tooltip",
+    ],
+    tags: [],
+    technologies: ["React", "TailwindCSS"],
   }
 ];
