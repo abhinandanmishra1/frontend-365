@@ -3,15 +3,15 @@ I’ll structure the suggestions by month to align with skill progression.
 
 ### **Projects by Month**
 **January**  
-1. Button with Hover Effects  
-2. Custom Checkbox  
-3. Toggle Switch  
-4. Accordion Menu  
-5. Responsive Navbar  
-6. Simple Modal Popup  
-7. Tooltip  
-8. Progress Bar  
-9. Tabs Component  
+1. Button with Hover Effects ✅
+2. Custom Checkbox ✅
+3. Toggle Switch  ✅
+4. Accordion Menu  ✅
+5. Responsive Navbar  ✅
+6. Simple Modal Popup  ✅
+7. Tooltip 👨🏻‍💻
+8. Progress Bar 👨🏻‍💻
+9. Tabs Component 👨🏻‍💻 
 10. Star Rating System  
 11. Image Carousel  
 12. Dropdown Menu  
