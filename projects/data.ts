@@ -112,4 +112,22 @@ export const projects: Project[] = [
     tags: [],
     technologies: ["React", "TailwindCSS"],
   },
+  {
+    id: 6,
+    name: "Modal",
+    description: "Modal with close button and overlay",
+    date: "2025-01-06",
+    category: "Basic",
+    component: "project6",
+    image: "https://abhicdn.netlify.app/images/frontend-365-project6.png",
+    resources: [
+      "https://flowbite.com/docs/components/modal/",
+    ],
+    features: [
+      "Modal with close button and overlay",
+      "Dynamic component, responsive and accessible",
+    ],
+    tags: [],
+    technologies: ["React", "TailwindCSS"],
+  }
 ];
