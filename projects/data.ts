@@ -147,5 +147,23 @@ export const projects: Project[] = [
     ],
     tags: [],
     technologies: ["React", "TailwindCSS"],
+  },
+  {
+    id: 8,
+    name: "Progress Bar",
+    description: "Progress bar with different colors for different progress level",
+    date: "2025-01-08",
+    category: "Basic",
+    component: "project8",
+    image: "https://abhicdn.netlify.app/images/frontend-365-project8.png",
+    resources: [
+      "https://flowbite.com/docs/components/progress/",
+    ],
+    features: [
+      "Progress bar with different colors for different progress level",
+      "Dynamic component, responsive and accessible",
+    ],
+    tags: [],
+    technologies: ["React", "TailwindCSS"],
   }
 ];
