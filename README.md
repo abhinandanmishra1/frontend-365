@@ -9,11 +9,11 @@ I’ll structure the suggestions by month to align with skill progression.
 4. Accordion Menu  ✅
 5. Responsive Navbar  ✅
 6. Simple Modal Popup  ✅
-7. Tooltip 👨🏻‍💻
-8. Progress Bar 👨🏻‍💻
+7. Tooltip ✅
+8. Progress Bar 👨🏻
 9. Tabs Component 👨🏻‍💻 
-10. Star Rating System  
-11. Image Carousel  
+10. Star Rating System 👨🏻‍💻
+11. Image Carousel 👨🏻‍💻 
 12. Dropdown Menu  
 13. Search Bar with Suggestions  
 14. Light/Dark Mode Toggle  
