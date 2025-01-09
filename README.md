@@ -10,17 +10,18 @@ I’ll structure the suggestions by month to align with skill progression.
 5. Responsive Navbar  ✅
 6. Simple Modal Popup  ✅
 7. Tooltip ✅
-8. Progress Bar 👨🏻
-9. Tabs Component 👨🏻‍💻 
-10. Star Rating System 👨🏻‍💻
-11. Image Carousel 👨🏻‍💻 
-12. Dropdown Menu  
-13. Search Bar with Suggestions  
-14. Light/Dark Mode Toggle  
-15. Animated Loader  
-16. Responsive Card Layout  
-17. Stepper/Stepper Form  
-18. Scroll to Top Button  
+8. Progress Bar ✅
+9. Tabs Component: Implementation 1 ✅
+10. Tabs Component: Implementation 2 👨🏻
+11. Star Rating System 👨🏻
+12. Image Carousel 👨🏻‍💻 
+13. Dropdown Menu 👨🏻‍💻
+14. Search Bar with Suggestions  
+15. Light/Dark Mode Toggle  
+16. Animated Loader  
+17. Responsive Card Layout  
+18. Stepper/Stepper Form  
+18. Tabs Component: Implementation 2
 19. Sticky Header  
 20. Password Strength Checker  
 21. Circular Progress Indicator  
