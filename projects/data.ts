@@ -165,5 +165,23 @@ export const projects: Project[] = [
     ],
     tags: [],
     technologies: ["React", "TailwindCSS"],
-  }
+  },
+  {
+    id: 9,
+    name: "Tabs Component",
+    description: "Tabs component like shadcnui",
+    date: "2025-01-09",
+    category: "Basic",
+    component: "project9",
+    image: "https://abhicdn.netlify.app/images/frontend-365-project9.png",
+    resources: [
+      "https://ui.shadcn.com/docs/components/tabs",
+    ],
+    features: [
+      "Tabs component like shadcnui",
+      "Dynamic component, responsive and accessible",
+    ],
+    tags: [],
+    technologies: ["React", "TailwindCSS"],
+  },
 ];
