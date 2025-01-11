@@ -201,5 +201,22 @@ export const projects: Project[] = [
     ],
     tags: [],
     technologies: ["React", "TailwindCSS"],
-  }
+  },{
+    id: 11,
+    name: "Stars Component",
+    description: "Star rating component allows full and half star rating both",
+    date: "2025-01-11",
+    category: "Basic",
+    component: "project11",
+    image: "https://abhicdn.netlify.app/images/frontend-365-project11.png",
+    resources: [
+      "No resources available",
+    ],
+    features: [
+      "Star rating component allows full and half star rating",
+      "Developed using React and TailwindCSS",
+    ],
+    tags: [],
+    technologies: ["React", "TailwindCSS"],
+  },
 ];
