@@ -12,12 +12,12 @@ I’ll structure the suggestions by month to align with skill progression.
 7. Tooltip ✅
 8. Progress Bar ✅
 9. Tabs Component: Implementation 1 ✅
-10. Tabs Component: Implementation 2 👨🏻
-11. Star Rating System 👨🏻
-12. Image Carousel 👨🏻‍💻 
+10. Tabs Component: Implementation 2 ✅
+11. Star Rating System ✅
+12. Image Carousel 👨🏻
 13. Dropdown Menu 👨🏻‍💻
-14. Search Bar with Suggestions  
-15. Light/Dark Mode Toggle  
+14. Search Bar with Suggestions 👨🏻‍💻
+15. Light/Dark Mode Toggle 👨🏻‍💻 
 16. Animated Loader  
 17. Responsive Card Layout  
 18. Stepper/Stepper Form  
