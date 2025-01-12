@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['abhicdn.netlify.app'],
+    domains: ['abhicdn.netlify.app', 'https://placehold.co/'],
   },
   compiler: {
     styledComponents: true,

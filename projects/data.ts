@@ -201,7 +201,8 @@ export const projects: Project[] = [
     ],
     tags: [],
     technologies: ["React", "TailwindCSS"],
-  },{
+  },
+  {
     id: 11,
     name: "Stars Component",
     description: "Star rating component allows full and half star rating both",
@@ -219,4 +220,22 @@ export const projects: Project[] = [
     tags: [],
     technologies: ["React", "TailwindCSS"],
   },
+  {
+    id: 12,
+    name: "Image carousel",
+    description: "Image carousel with autoplay and custom duration",
+    date: "2025-01-12",
+    category: "Basic",
+    component: "project12",
+    image: "https://abhicdn.netlify.app/images/frontend-365-project12.png",
+    resources: [
+      "https://flowbite.com/docs/components/carousel/",
+    ],
+    features: [
+      "Image carousel with autoplay and custom duration",
+      "Dynamic component, responsive and accessible",
+    ],
+    tags: [],
+    technologies: ["React", "TailwindCSS"],
+  }
 ];
