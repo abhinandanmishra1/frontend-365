@@ -96,7 +96,7 @@ export default function ProjectDetailPage() {
             <CardTitle>Live Demo</CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="aspect-video bg-muted flex items-center justify-center">
+            <div className="bg-muted flex items-center justify-center w-full h-[500px] overflow-y-auto">
               <ProjectComponent />
             </div>
             <div className="mt-4 space-x-4">
