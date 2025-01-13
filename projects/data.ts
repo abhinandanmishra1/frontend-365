@@ -101,9 +101,7 @@ export const projects: Project[] = [
     category: "Basic",
     component: "project5",
     image: "https://abhicdn.netlify.app/images/frontend-365-project5.png",
-    resources: [
-      "https://flowbite.com/docs/components/navbar/",
-    ],
+    resources: ["https://flowbite.com/docs/components/navbar/"],
     features: [
       "Responsive navbar with sticky ability",
       "It's a dynamic component and can be used in any project",
@@ -120,9 +118,7 @@ export const projects: Project[] = [
     category: "Basic",
     component: "project6",
     image: "https://abhicdn.netlify.app/images/frontend-365-project6.png",
-    resources: [
-      "https://flowbite.com/docs/components/modal/",
-    ],
+    resources: ["https://flowbite.com/docs/components/modal/"],
     features: [
       "Modal with close button and overlay",
       "Dynamic component, responsive and accessible",
@@ -138,9 +134,7 @@ export const projects: Project[] = [
     category: "Basic",
     component: "project7",
     image: "https://abhicdn.netlify.app/images/frontend-365-project7.png",
-    resources: [
-      "https://uiverse.io/tooltips",
-    ],
+    resources: ["https://uiverse.io/tooltips"],
     features: [
       "Tooltip of different types like info, success, warning and error",
       "Can add custom content in the tooltip",
@@ -151,14 +145,13 @@ export const projects: Project[] = [
   {
     id: 8,
     name: "Progress Bar",
-    description: "Progress bar with different colors for different progress level",
+    description:
+      "Progress bar with different colors for different progress level",
     date: "2025-01-08",
     category: "Basic",
     component: "project8",
     image: "https://abhicdn.netlify.app/images/frontend-365-project8.png",
-    resources: [
-      "https://flowbite.com/docs/components/progress/",
-    ],
+    resources: ["https://flowbite.com/docs/components/progress/"],
     features: [
       "Progress bar with different colors for different progress level",
       "Dynamic component, responsive and accessible",
@@ -174,9 +167,7 @@ export const projects: Project[] = [
     category: "Basic",
     component: "project9",
     image: "https://abhicdn.netlify.app/images/frontend-365-project9.png",
-    resources: [
-      "https://ui.shadcn.com/docs/components/tabs",
-    ],
+    resources: ["https://ui.shadcn.com/docs/components/tabs"],
     features: [
       "Tabs component like shadcnui",
       "Dynamic component, responsive and accessible",
@@ -192,9 +183,7 @@ export const projects: Project[] = [
     category: "Basic",
     component: "project10",
     image: "https://abhicdn.netlify.app/images/frontend-365-project10.png",
-    resources: [
-      "https://ui.shadcn.com/docs/components/tabs",
-    ],
+    resources: ["https://ui.shadcn.com/docs/components/tabs"],
     features: [
       "Tabs component like shadcnui developed using React context concept",
       "Dynamic component, responsive and accessible",
@@ -210,9 +199,7 @@ export const projects: Project[] = [
     category: "Basic",
     component: "project11",
     image: "https://abhicdn.netlify.app/images/frontend-365-project11.png",
-    resources: [
-      "No resources available",
-    ],
+    resources: ["No resources available"],
     features: [
       "Star rating component allows full and half star rating",
       "Developed using React and TailwindCSS",
@@ -228,14 +215,50 @@ export const projects: Project[] = [
     category: "Basic",
     component: "project12",
     image: "https://abhicdn.netlify.app/images/frontend-365-project12.png",
-    resources: [
-      "https://flowbite.com/docs/components/carousel/",
-    ],
+    resources: ["https://flowbite.com/docs/components/carousel/"],
     features: [
       "Image carousel with autoplay and custom duration",
       "Dynamic component, responsive and accessible",
     ],
     tags: [],
     technologies: ["React", "TailwindCSS"],
-  }
+  },
+  {
+    id: 13,
+    name: "Accessible Dropdown Component",
+    description: "A fully accessible, animated dropdown menu component with keyboard navigation, ARIA support, and mobile responsiveness",
+    date: "2025-01-13",
+    category: "UI Components",
+    component: "project13",
+    image: "https://abhicdn.netlify.app/images/frontend-365-project13.png",
+    resources: [
+      "https://www.youtube.com/watch?v=S-VeYcOCFZw",
+      "https://developer.mozilla.org/en-US/docs/Web/Accessibility",
+      "https://www.w3.org/WAI/ARIA/apg/patterns/menu-button/",
+      "https://tailwindcss.com/docs/transition-property"
+    ],
+    features: [
+      "Click outside detection to close dropdown",
+      "Keyboard navigation with Escape/Enter key support",
+      "ARIA attributes for accessibility",
+      "Smooth animations and transitions",
+      "Disabled state support for menu items",
+      "Mobile-responsive design",
+      "Modular component architecture",
+      "Focus management for keyboard users"
+    ],
+    tags: [
+      "accessibility",
+      "animation",
+      "ui-component",
+      "keyboard-navigation",
+      "mobile-friendly",
+      "typescript"
+    ],
+    technologies: [
+      "React",
+      "TypeScript",
+      "TailwindCSS",
+    ],
+}
 ];
