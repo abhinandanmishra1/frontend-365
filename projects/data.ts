@@ -226,7 +226,8 @@ export const projects: Project[] = [
   {
     id: 13,
     name: "Accessible Dropdown Component",
-    description: "A fully accessible, animated dropdown menu component with keyboard navigation, ARIA support, and mobile responsiveness",
+    description:
+      "A fully accessible, animated dropdown menu component with keyboard navigation, ARIA support, and mobile responsiveness",
     date: "2025-01-13",
     category: "UI Components",
     component: "project13",
@@ -235,7 +236,7 @@ export const projects: Project[] = [
       "https://www.youtube.com/watch?v=S-VeYcOCFZw",
       "https://developer.mozilla.org/en-US/docs/Web/Accessibility",
       "https://www.w3.org/WAI/ARIA/apg/patterns/menu-button/",
-      "https://tailwindcss.com/docs/transition-property"
+      "https://tailwindcss.com/docs/transition-property",
     ],
     features: [
       "Click outside detection to close dropdown",
@@ -245,7 +246,7 @@ export const projects: Project[] = [
       "Disabled state support for menu items",
       "Mobile-responsive design",
       "Modular component architecture",
-      "Focus management for keyboard users"
+      "Focus management for keyboard users",
     ],
     tags: [
       "accessibility",
@@ -253,12 +254,28 @@ export const projects: Project[] = [
       "ui-component",
       "keyboard-navigation",
       "mobile-friendly",
-      "typescript"
+      "typescript",
     ],
-    technologies: [
-      "React",
-      "TypeScript",
-      "TailwindCSS",
+    technologies: ["React", "TypeScript", "TailwindCSS"],
+  },
+  {
+    id: 14,
+    name: "Search Suggestions",
+    description: "Search suggestions with debounce and close on outside click",
+    date: "2025-01-14",
+    category: "UI Components",
+    component: "project14",
+    image: "https://abhicdn.netlify.app/images/frontend-365-project14.png",
+    resources: [
+      "https://serpapi.com/google-autocomplete-api"
     ],
-}
+    features: [
+      "Click outside detection to close dropdown",
+      "Using google autocomplete API for fetching suggesstions",
+      "Navigating through suggestions with arrow keys",
+      "Debounce search input for performance",
+    ],
+    tags: ["accessibility"],
+    technologies: ["React", "TypeScript", "TailwindCSS"],
+  },
 ];
