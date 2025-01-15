@@ -266,9 +266,7 @@ export const projects: Project[] = [
     category: "UI Components",
     component: "project14",
     image: "https://abhicdn.netlify.app/images/frontend-365-project14.png",
-    resources: [
-      "https://serpapi.com/google-autocomplete-api"
-    ],
+    resources: ["https://serpapi.com/google-autocomplete-api"],
     features: [
       "Click outside detection to close dropdown",
       "Using google autocomplete API for fetching suggesstions",
@@ -277,5 +275,21 @@ export const projects: Project[] = [
     ],
     tags: ["accessibility"],
     technologies: ["React", "TypeScript", "TailwindCSS"],
+  },
+  {
+    id: 15,
+    name: "Light/Dark Mode Toggle",
+    description: "Toggle between light and dark mode",
+    date: "2025-01-15",
+    category: "UI Components",
+    component: "project15",
+    image: "https://abhicdn.netlify.app/images/frontend-365-project15.png",
+    resources: ["https://flowbite.com/docs/components/toggle/"],
+    features: [
+      "Toggle between light and dark mode",
+      "Dynamic component, responsive and accessible",
+    ],
+    tags: [],
+    technologies: ["React", "TailwindCSS"],
   },
 ];
