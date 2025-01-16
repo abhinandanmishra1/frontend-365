@@ -1,28 +1,43 @@
-'use client'
+"use client";
 
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { useRouter, useSearchParams } from "next/navigation";
 
-import { Button } from '@/components/ui/Button'
-import Image from 'next/image'
-import Link from 'next/link'
-import { cn } from '@/lib/utils'
-import { projects } from '@/projects/data'
-import { useState } from 'react'
+import { Button } from "@/components/ui/Button";
+import Link from "next/link";
+import { cn } from "@/lib/utils";
+import { projects } from "@/projects/data";
+import { useState } from "react";
 
 export default function ProjectsPage() {
-  const [filter, setFilter] = useState('All')
-  const [page, setPage] = useState(1)
-  const projectsPerPage = 12
+  const [filter, setFilter] = useState("All");
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const page = parseInt(searchParams.get("page") ?? "1");
+  const projectsPerPage = 9;
 
-  const filteredProjects = filter === 'All' 
-    ? projects 
-    : projects.filter(project => project.category === filter)
+  const filteredProjects =
+    filter === "All"
+      ? projects
+      : projects.filter((project) => project.category === filter);
 
   const paginatedProjects = filteredProjects.slice(
     (page - 1) * projectsPerPage,
     page * projectsPerPage
-  )
+  );
 
   return (
     <div className="container mx-auto py-12">
@@ -40,28 +55,32 @@ export default function ProjectsPage() {
           </SelectContent>
         </Select>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 p-8 xl:px-32 gap-6">
         {paginatedProjects.map((project) => (
           <Card key={project.id} className="overflow-hidden">
-            <CardHeader style={{
-              backgroundImage: `url(${project.image})`,
-              backgroundSize: '300px 150px',
-              backgroundPosition: 'center',
-              backgroundRepeat: 'no-repeat'
-            }} className={cn(`p-0 h-48 border-b`)}>
-            </CardHeader>
+            <CardHeader
+              style={{
+                backgroundImage: `url(${project.image})`,
+                backgroundSize: "300px 150px",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+              }}
+              className={cn(`p-0 h-48 border-b`)}
+            ></CardHeader>
             <CardContent className="p-4">
               <div className="flex justify-between items-start mb-2">
                 <CardTitle>{project.name}</CardTitle>
                 <span className="text-xs text-muted-foreground">
-                  {new Date(project.date).toLocaleDateString('en-US', {
-                    year: 'numeric',
-                    month: 'short',
-                    day: 'numeric'
+                  {new Date(project.date).toLocaleDateString("en-US", {
+                    year: "numeric",
+                    month: "short",
+                    day: "numeric",
                   })}
                 </span>
               </div>
-              <p className="text-sm text-muted-foreground line-clamp-1">{project.description}</p>
+              <p className="text-sm text-muted-foreground line-clamp-1">
+                {project.description}
+              </p>
             </CardContent>
             <CardFooter>
               <Button asChild className="w-full">
@@ -73,19 +92,22 @@ export default function ProjectsPage() {
       </div>
       <div className="mt-8 flex justify-center space-x-2">
         <Button
-          onClick={() => setPage(page - 1)}
+          onClick={() => {
+            router.push(`/projects?page=${page - 1}`);
+          }}
           disabled={page === 1}
         >
           Previous
         </Button>
         <Button
-          onClick={() => setPage(page + 1)}
+          onClick={() => {
+            router.push(`/projects?page=${page + 1}`);
+          }}
           disabled={page * projectsPerPage >= filteredProjects.length}
         >
           Next
         </Button>
       </div>
     </div>
-  )
+  );
 }
-
