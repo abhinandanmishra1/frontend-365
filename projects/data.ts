@@ -306,5 +306,20 @@ export const projects: Project[] = [
     ],
     tags: [],
     technologies: ["React", "TailwindCSS"],
+  },
+  {
+    id: 17,
+    name: "Responsive Card",
+    description: "Responsive card component with header, content and footer",
+    date: "2025-01-17",
+    category: "UI Components",
+    component: "project17",
+    image: "https://abhicdn.netlify.app/images/frontend-365-project17.png",
+    resources: ["https://ui.shadcn.com/docs/components/card"],
+    features: [
+      "Responsive card with header, content and footer",
+    ],
+    tags: [],
+    technologies: ["React", "TailwindCSS"],
   }
 ];
