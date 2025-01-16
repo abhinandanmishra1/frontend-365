@@ -292,4 +292,19 @@ export const projects: Project[] = [
     tags: [],
     technologies: ["React", "TailwindCSS"],
   },
+  {
+    id: 16,
+    name: "Animated Loader",
+    description: "Animated loader with customizable animation",
+    date: "2025-01-16",
+    category: "UI Components",
+    component: "project16",
+    image: "https://abhicdn.netlify.app/images/frontend-365-project16.png",
+    resources: ["https://uiverse.io/loaders/"],
+    features: [
+      "Animated loader with multiple animation",
+    ],
+    tags: [],
+    technologies: ["React", "TailwindCSS"],
+  }
 ];
