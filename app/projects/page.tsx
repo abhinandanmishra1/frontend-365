@@ -14,16 +14,18 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { Suspense, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 
 import { Button } from "@/components/ui/Button";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { projects } from "@/projects/data";
-import { useState } from "react";
 
-export default function ProjectsPage() {
-  const [filter, setFilter] = useState("All");
+interface ProjectProps {
+  filter: string;
+}
+const Projects = ({ filter }: ProjectProps) => {
   const router = useRouter();
   const searchParams = useSearchParams();
   const page = parseInt(searchParams.get("page") ?? "1");
@@ -38,23 +40,8 @@ export default function ProjectsPage() {
     (page - 1) * projectsPerPage,
     page * projectsPerPage
   );
-
   return (
-    <div className="container mx-auto py-12">
-      <h1 className="text-3xl font-bold mb-8">Projects</h1>
-      <div className="mb-6">
-        <Select onValueChange={(value) => setFilter(value)}>
-          <SelectTrigger className="w-[180px]">
-            <SelectValue placeholder="Filter by category" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="All">All</SelectItem>
-            <SelectItem value="Basic">Basic</SelectItem>
-            <SelectItem value="Intermediate">Intermediate</SelectItem>
-            <SelectItem value="Advanced">Advanced</SelectItem>
-          </SelectContent>
-        </Select>
-      </div>
+    <>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 p-8 xl:px-32 gap-6">
         {paginatedProjects.map((project) => (
           <Card key={project.id} className="overflow-hidden">
@@ -108,6 +95,32 @@ export default function ProjectsPage() {
           Next
         </Button>
       </div>
+    </>
+  );
+};
+
+export default function ProjectsPage() {
+  const [filter, setFilter] = useState("All");
+
+  return (
+    <div className="container mx-auto py-12">
+      <h1 className="text-3xl font-bold mb-8">Projects</h1>
+      <div className="mb-6">
+        <Select onValueChange={(value) => setFilter(value)}>
+          <SelectTrigger className="w-[180px]">
+            <SelectValue placeholder="Filter by category" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="All">All</SelectItem>
+            <SelectItem value="Basic">Basic</SelectItem>
+            <SelectItem value="Intermediate">Intermediate</SelectItem>
+            <SelectItem value="Advanced">Advanced</SelectItem>
+          </SelectContent>
+        </Select>
+      </div>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Projects filter={filter} />
+      </Suspense>
     </div>
   );
 }
