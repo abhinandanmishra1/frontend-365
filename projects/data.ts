@@ -321,5 +321,20 @@ export const projects: Project[] = [
     ],
     tags: [],
     technologies: ["React", "TailwindCSS"],
-  }
+  },
+  {
+    id: 18,
+    name: "Stepper Component",
+    description: "Stepper component with dynamic steps and active step",
+    date: "2025-01-18",
+    category: "UI Components",
+    component: "project18",
+    image: "https://abhicdn.netlify.app/images/frontend-365-project18.png",
+    resources: ["https://ui.shadcn.com/docs/components/stepper"],
+    features: [
+      "Stepper component with dynamic steps and active step",
+    ],
+    tags: [], 
+    technologies: ["React", "TailwindCSS"],
+  },
 ];
