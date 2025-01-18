@@ -17,24 +17,23 @@ I’ll structure the suggestions by month to align with skill progression.
 12. Image Carousel ✅
 13. Dropdown Menu ✅
 14. Search Bar with Suggestions ✅
-15. Light/Dark Mode Toggle 👨🏻‍💻
-16. Animated Loader 👨🏻‍💻
-17. Responsive Card Layout 👨🏻‍💻
-18. Stepper/Stepper Form 👨🏻‍💻 
-18. Tabs Component: Implementation 2
-19. Sticky Header  
-20. Password Strength Checker  
-21. Circular Progress Indicator  
-22. Custom Range Slider  
-23. Scroll Spy  
-24. Alert Notification  
-25. Toast Message  
-26. Digital Clock  
+15. Light/Dark Mode Toggle ✅
+16. Animated Loader ✅
+17. Responsive Card Layout ✅
+18. Stepper/Stepper Form ✅
+18. Skeleton Loader 👨🏻
+19. Sticky Header 👨🏻‍💻
+20. Password Strength Checker 👨🏻‍💻 
+21. Circular Progress Indicator 👨🏻‍💻
+22. Custom Range Slider 👨🏻‍💻
+23. Scroll Spy 👨🏻‍💻
+24. Alert Notification 👨🏻‍💻
+25. Toast Message  👨🏻‍💻
+26. Digital Clock 
 27. Stopwatch  
 28. Countdown Timer  
 29. Weather Widget  
 30. Color Palette Picker
-31. Skeleton Loader
 
 **February**  
 1. Expense Tracker UI  
