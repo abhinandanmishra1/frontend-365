@@ -337,4 +337,19 @@ export const projects: Project[] = [
     tags: [], 
     technologies: ["React", "TailwindCSS"],
   },
+  {
+    id: 19,
+    name: "Skeleton Loader",
+    description: "Skeleton loader for loading state of the component",
+    date: "2025-01-19",
+    category: "UI Components",
+    component: "project19",
+    image: "https://abhicdn.netlify.app/images/frontend-365-project19.png",
+    resources: ["https://uiverse.io/loaders/"],
+    features: [
+      "Skeleton loader for loading state of the component",
+    ],
+    tags: [],
+    technologies: ["React", "TailwindCSS"],
+  },
 ];
