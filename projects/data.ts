@@ -352,4 +352,19 @@ export const projects: Project[] = [
     tags: [],
     technologies: ["React", "TailwindCSS"],
   },
+  {
+    id: 20,
+    name: "Sticky Header",
+    description: "Sticky header component with dynamic content",
+    date: "2025-01-20",
+    category: "UI Components",
+    component: "project20",
+    image: "https://abhicdn.netlify.app/images/frontend-365-project20.png",
+    resources: ["https://ui.shadcn.com/docs/components/header"],
+    features: [
+      "Sticky header component with dynamic content",
+      ],
+      tags: [],
+      technologies: ["React", "TailwindCSS"],
+  }
 ];
