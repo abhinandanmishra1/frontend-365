@@ -366,5 +366,20 @@ export const projects: Project[] = [
       ],
       tags: [],
       technologies: ["React", "TailwindCSS"],
+  },
+  {
+    id: 21,
+    name: "Password Stength Checker",
+    description: "Password strength checker with dynamic feedback",
+    date: "2025-01-21",
+    category: "UI Components",
+    component: "project21",
+    image: "https://abhicdn.netlify.app/images/frontend-365-project21.png",
+    resources: ["https://ui.shadcn.com/docs/components/password-input"],
+    features: [
+      "Password strength checker with dynamic feedback",
+    ],
+    tags: [],
+    technologies: ["React", "TailwindCSS"],
   }
 ];
