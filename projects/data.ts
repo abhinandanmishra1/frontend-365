@@ -301,9 +301,7 @@ export const projects: Project[] = [
     component: "project16",
     image: "https://abhicdn.netlify.app/images/frontend-365-project16.png",
     resources: ["https://uiverse.io/loaders/"],
-    features: [
-      "Animated loader with multiple animation",
-    ],
+    features: ["Animated loader with multiple animation"],
     tags: [],
     technologies: ["React", "TailwindCSS"],
   },
@@ -316,9 +314,7 @@ export const projects: Project[] = [
     component: "project17",
     image: "https://abhicdn.netlify.app/images/frontend-365-project17.png",
     resources: ["https://ui.shadcn.com/docs/components/card"],
-    features: [
-      "Responsive card with header, content and footer",
-    ],
+    features: ["Responsive card with header, content and footer"],
     tags: [],
     technologies: ["React", "TailwindCSS"],
   },
@@ -331,10 +327,8 @@ export const projects: Project[] = [
     component: "project18",
     image: "https://abhicdn.netlify.app/images/frontend-365-project18.png",
     resources: ["https://ui.shadcn.com/docs/components/stepper"],
-    features: [
-      "Stepper component with dynamic steps and active step",
-    ],
-    tags: [], 
+    features: ["Stepper component with dynamic steps and active step"],
+    tags: [],
     technologies: ["React", "TailwindCSS"],
   },
   {
@@ -346,9 +340,7 @@ export const projects: Project[] = [
     component: "project19",
     image: "https://abhicdn.netlify.app/images/frontend-365-project19.png",
     resources: ["https://uiverse.io/loaders/"],
-    features: [
-      "Skeleton loader for loading state of the component",
-    ],
+    features: ["Skeleton loader for loading state of the component"],
     tags: [],
     technologies: ["React", "TailwindCSS"],
   },
@@ -361,11 +353,9 @@ export const projects: Project[] = [
     component: "project20",
     image: "https://abhicdn.netlify.app/images/frontend-365-project20.png",
     resources: ["https://ui.shadcn.com/docs/components/header"],
-    features: [
-      "Sticky header component with dynamic content",
-      ],
-      tags: [],
-      technologies: ["React", "TailwindCSS"],
+    features: ["Sticky header component with dynamic content"],
+    tags: [],
+    technologies: ["React", "TailwindCSS"],
   },
   {
     id: 21,
@@ -376,10 +366,21 @@ export const projects: Project[] = [
     component: "project21",
     image: "https://abhicdn.netlify.app/images/frontend-365-project21.png",
     resources: ["https://ui.shadcn.com/docs/components/password-input"],
-    features: [
-      "Password strength checker with dynamic feedback",
-    ],
+    features: ["Password strength checker with dynamic feedback"],
     tags: [],
     technologies: ["React", "TailwindCSS"],
-  }
+  },
+  {
+    id: 22,
+    name: "Circular Progress Bar",
+    description: "Circular progress bar with dynamic animation",
+    date: "2025-01-22",
+    category: "UI Components",
+    component: "project22",
+    image: "https://abhicdn.netlify.app/images/frontend-365-project22.png",
+    resources: ["https://www.30secondsofcode.org/css/s/circular-progress-bar/"],
+    features: ["Circular progress bar with dynamic animation"],
+    tags: [],
+    technologies: ["React", "TailwindCSS"],
+  },
 ];
