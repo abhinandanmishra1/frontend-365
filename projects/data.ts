@@ -383,4 +383,22 @@ export const projects: Project[] = [
     tags: [],
     technologies: ["React", "TailwindCSS"],
   },
+  {
+    id: 23,
+    name: "Custom Range Slider",
+    description:
+      "Custom range slider that can have dynamic minimum and maximum range values",
+    date: "2025-01-23",
+    category: "UI Components",
+    component: "project23",
+    image: "https://abhicdn.netlify.app/images/frontend-365-project23.png",
+    resources: [
+      "https://overreacted.io/"
+    ],
+    features: [
+      "Custom range slider that can have dynamic minimum and maximum range values",
+    ],
+    tags: [],
+    technologies: ["React", "TailwindCSS"],
+  },
 ];
