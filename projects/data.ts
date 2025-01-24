@@ -401,4 +401,22 @@ export const projects: Project[] = [
     tags: [],
     technologies: ["React", "TailwindCSS"],
   },
+  {
+    id: 24,
+    name: "Alert Component",
+    description: "Alert component with different types of variants and types",
+    date: "2025-01-24",
+    category: "UI Components",
+    component: "project24",
+    image: "https://abhicdn.netlify.app/images/frontend-365-project24.png",
+    resources: ["https://mui.com/material-ui/react-alert/"],
+    features: [
+      "Different types of alerts like success, error, warning and info",
+      "Alerts can be dismissible or non-dismissible",
+      "Custom icon and color for the alert",
+      "Different variants like filled and outlined",
+    ],
+    tags: [],
+    technologies: ["React", "TailwindCSS"],
+  }
 ];
