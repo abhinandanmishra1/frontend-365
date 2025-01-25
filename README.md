@@ -27,12 +27,12 @@ I’ll structure the suggestions by month to align with skill progression.
 22. Circular Progress Indicator ✅
 23. Custom Range Slider ✅
 24. Alert Notification ✅
-25. Toast Message 👨🏻
-26. Digital Clock 👨🏻‍💻
+25. Toast Message ✅
+26. Digital Clock 👨🏻
 27. Stopwatch 👨🏻‍💻
-28. Countdown Timer  
-29. Weather Widget  
-30. Color Palette Picker
+28. Countdown Timer 👨🏻‍💻
+29. Weather Widget 👨🏻‍💻 
+30. Color Palette Picker 👨🏻‍💻
 
 **February**  
 1. Expense Tracker UI  

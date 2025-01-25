@@ -418,5 +418,26 @@ export const projects: Project[] = [
     ],
     tags: [],
     technologies: ["React", "TailwindCSS"],
+  },
+  {
+    id: 25,
+    name: "Toast Message",
+    description: "Toast message component with different types of variants and types",
+    date: "2025-01-25",
+    category: "UI Components",
+    component: "project25",
+    image: "https://abhicdn.netlify.app/images/frontend-365-project25.png",
+    resources: [
+      "https://blog.logrocket.com/how-to-create-custom-toast-component-react/",
+      "https://github.com/c99rahul/react-toast"
+    ],
+    features: [
+      "Different types of toast messages like success, error, warning and info",
+      "Toast messages can be dismissible or non-dismissible",
+      "Custom icon and color for the toast message",
+      "Different variants like filled and outlined",
+    ],
+    tags: [],
+    technologies: ["React", "TailwindCSS"],
   }
 ];
