@@ -439,5 +439,18 @@ export const projects: Project[] = [
     ],
     tags: [],
     technologies: ["React", "TailwindCSS"],
+  },
+  {
+    id: 26,
+    name: "Digital Clock",
+    description: "Digital clock component with beautiful design",
+    date: "2025-01-26",
+    category: "UI Components",
+    component: "project26",
+    image: "https://abhicdn.netlify.app/images/frontend-365-project26.png",
+    resources: ["https://www.w3schools.com/js/js_date_methods.asp"],
+    features: ["Digital clock component with beautiful design"],
+    tags: [],
+    technologies: ["React", "TailwindCSS"],
   }
 ];
