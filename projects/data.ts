@@ -452,5 +452,20 @@ export const projects: Project[] = [
     features: ["Digital clock component with beautiful design"],
     tags: [],
     technologies: ["React", "TailwindCSS"],
+  },
+  {
+    id: 27,
+    name: "Stopwatch",
+    description: "Stopwatch component with start, stop and reset functionality",
+    date: "2025-01-27",
+    category: "UI Components",
+    component: "project27",
+    image: "https://abhicdn.netlify.app/images/frontend-365-project27.png",
+    resources: ["https://www.w3schools.com/js/js_date_methods.asp"],
+    features: [
+      "Stopwatch component with start, stop and reset functionality",
+    ],
+    tags: [],
+    technologies: ["React", "TailwindCSS"],
   }
 ];
