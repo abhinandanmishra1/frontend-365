@@ -467,5 +467,20 @@ export const projects: Project[] = [
     ],
     tags: [],
     technologies: ["React", "TailwindCSS"],
+  },
+  {
+    id: 28,
+    name: "Countdown Timer",
+    description: "Countdown timer component with with start, stop and reset functionality",
+    date: "2025-01-28",
+    category: "UI Components",
+    component: "project28",
+    image: "https://abhicdn.netlify.app/images/frontend-365-project28.png",
+    resources: ["https://www.w3schools.com/js/js_date_methods.asp"],
+    features: [
+      "Countdown timer component with with start, stop and reset functionality",
+    ],  
+    tags: [],
+    technologies: ["React", "TailwindCSS"],
   }
 ];
