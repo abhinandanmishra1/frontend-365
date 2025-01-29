@@ -482,5 +482,20 @@ export const projects: Project[] = [
     ],  
     tags: [],
     technologies: ["React", "TailwindCSS"],
+  },
+  {
+    id: 29,
+    name: "Weather Widget",
+    description: "Weather widget component with current weather data",
+    date: "2025-01-29",
+    category: "UI Components",
+    component: "project29",
+    image: "https://abhicdn.netlify.app/images/frontend-365-project29.png",
+    resources: ["https://www.w3schools.com/js/js_date_methods.asp"],
+    features: [
+      "Weather widget component with current weather data",
+    ],
+    tags: [],
+    technologies: ["React", "TailwindCSS"],
   }
 ];
