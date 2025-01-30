@@ -497,5 +497,20 @@ export const projects: Project[] = [
     ],
     tags: [],
     technologies: ["React", "TailwindCSS"],
+  },
+  {
+    id: 30,
+    name: "Color Picker",
+    description: "Color picker component with color selection",
+    date: "2025-01-30",
+    category: "UI Components",
+    component: "project30",
+    image: "https://abhicdn.netlify.app/images/frontend-365-project30.png",
+    resources: ["https://www.w3schools.com/js/js_date_methods.asp"],
+    features: [
+      "Color picker component with color selection",
+    ],
+    tags: [],
+    technologies: ["React", "TailwindCSS"],
   }
 ];
