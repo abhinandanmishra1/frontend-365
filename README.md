@@ -32,17 +32,40 @@ I’ll structure the suggestions by month to align with skill progression.
 27. Stopwatch ✅
 28. Countdown Timer ✅
 29. Weather Widget ✅
-30. Color Palette Picker 👨🏻‍💻
+30. Color Palette Picker ✅
+31. Animated SVG Loader 👨🏻‍💻
 
 **February**  
-1. Expense Tracker UI  
-2. Dynamic Table with Sort/Filter  
-3. Custom File Upload Component  
-4. Multi-Select Dropdown  
-5. Auto-Save Form  
-6. Responsive Sidebar Navigation  
+1. Custom Editable Text Field (ShadCN Input)  
+2. Dynamic Table with Sort/Filter (ShadCN Table)  
+3. Custom File Upload Button  
+4. Multi-Select Dropdown (ShadCN Combobox)  
+5. Auto-Saving Input Field  
+6. Collapsible Sidebar (ShadCN Sheet)  
 7. Sticky Footer  
 8. Floating Action Button  
 9. Flip Card Animation  
-10. Skeleton Loader  
-... *(similar progression for each month)*
+10. Draggable List Items  
+11. Custom Select Dropdown with Search (ShadCN Select)  
+12. Scroll Progress Indicator  
+13. Image Zoom on Hover  
+14. Inline Editable Table Row  
+15. Infinite Scroll List  
+16. Masonry Grid Layout  
+17. Image Comparison Slider  
+18. Scroll Snap Carousel  
+19. Timeline Component  
+20. Multi-Step Form with Validation (ShadCN Form)  
+21. Resizable Panels (ShadCN Resizable)  
+22. Kanban Board Column  
+23. Code Editor with Syntax Highlighting  
+24. Drag-and-Drop File Uploader  
+25. Chat Bubble with Typing Indicator  
+26. Calendar Date Picker (ShadCN Calendar)  
+27. Custom Audio Player Controls  
+28. Video Player with Custom Controls  
+29. Heatmap Tooltip  
+30. Customizable Widget (ShadCN Card)
+
+**March**
+-- To be continued...
