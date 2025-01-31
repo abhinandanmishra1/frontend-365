@@ -392,9 +392,7 @@ export const projects: Project[] = [
     category: "UI Components",
     component: "project23",
     image: "https://abhicdn.netlify.app/images/frontend-365-project23.png",
-    resources: [
-      "https://overreacted.io/"
-    ],
+    resources: ["https://overreacted.io/"],
     features: [
       "Custom range slider that can have dynamic minimum and maximum range values",
     ],
@@ -422,14 +420,15 @@ export const projects: Project[] = [
   {
     id: 25,
     name: "Toast Message",
-    description: "Toast message component with different types of variants and types",
+    description:
+      "Toast message component with different types of variants and types",
     date: "2025-01-25",
     category: "UI Components",
     component: "project25",
     image: "https://abhicdn.netlify.app/images/frontend-365-project25.png",
     resources: [
       "https://blog.logrocket.com/how-to-create-custom-toast-component-react/",
-      "https://github.com/c99rahul/react-toast"
+      "https://github.com/c99rahul/react-toast",
     ],
     features: [
       "Different types of toast messages like success, error, warning and info",
@@ -462,16 +461,15 @@ export const projects: Project[] = [
     component: "project27",
     image: "https://abhicdn.netlify.app/images/frontend-365-project27.png",
     resources: ["https://www.w3schools.com/js/js_date_methods.asp"],
-    features: [
-      "Stopwatch component with start, stop and reset functionality",
-    ],
+    features: ["Stopwatch component with start, stop and reset functionality"],
     tags: [],
     technologies: ["React", "TailwindCSS"],
   },
   {
     id: 28,
     name: "Countdown Timer",
-    description: "Countdown timer component with with start, stop and reset functionality",
+    description:
+      "Countdown timer component with with start, stop and reset functionality",
     date: "2025-01-28",
     category: "UI Components",
     component: "project28",
@@ -479,7 +477,7 @@ export const projects: Project[] = [
     resources: ["https://www.w3schools.com/js/js_date_methods.asp"],
     features: [
       "Countdown timer component with with start, stop and reset functionality",
-    ],  
+    ],
     tags: [],
     technologies: ["React", "TailwindCSS"],
   },
@@ -492,9 +490,7 @@ export const projects: Project[] = [
     component: "project29",
     image: "https://abhicdn.netlify.app/images/frontend-365-project29.png",
     resources: ["https://www.w3schools.com/js/js_date_methods.asp"],
-    features: [
-      "Weather widget component with current weather data",
-    ],
+    features: ["Weather widget component with current weather data"],
     tags: [],
     technologies: ["React", "TailwindCSS"],
   },
@@ -507,10 +503,21 @@ export const projects: Project[] = [
     component: "project30",
     image: "https://abhicdn.netlify.app/images/frontend-365-project30.png",
     resources: ["https://www.w3schools.com/js/js_date_methods.asp"],
-    features: [
-      "Color picker component with color selection",
-    ],
+    features: ["Color picker component with color selection"],
     tags: [],
     technologies: ["React", "TailwindCSS"],
-  }
+  },
+  {
+    id: 31,
+    name: "Animated SVG Loader",
+    description: "Animated SVG loader component with loading animation",
+    date: "2025-01-31",
+    category: "UI Components",
+    component: "project31",
+    image: "https://abhicdn.netlify.app/images/frontend-365-project31.png",
+    resources: ["https://www.svgbackgrounds.com/tag/yesvg/"],
+    features: ["Animated SVG loader component with loading animation"],
+    tags: [],
+    technologies: ["React", "TailwindCSS"],
+  },
 ];
