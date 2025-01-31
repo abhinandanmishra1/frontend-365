@@ -11,7 +11,7 @@ import { Check, Copy, Github } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 import { useParams, useRouter, useSearchParams } from "next/navigation";
 
-import { Button } from "@/components/ui/Button";
+import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import axios from "axios";

@@ -19,7 +19,7 @@ import {
 } from '@/components/ui/select';
 import { getUniqueMonthsAndYears, projects } from '@/projects/data';
 
-import { Button } from '@/components/ui/Button';
+import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { cn } from '@/lib/utils';
 

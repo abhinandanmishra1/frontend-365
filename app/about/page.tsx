@@ -1,7 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { FileText, Github, Linkedin } from 'lucide-react'
 
-import { Button } from '@/components/ui/Button'
+import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 
 export default function AboutPage() {
