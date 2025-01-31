@@ -1,21 +1,25 @@
 export interface Project {
-  id: number;
+  id: number; // Changed to string for month-based identification
   name: string;
   description: string;
   date: string;
-  category: string;
+  category: "Basic" | "Intermediate" | "Advanced";
   image: string;
   resources: string[];
   features: string[];
   tags: string[];
   technologies: string[];
-  component: string; // path to the component
+  component: string;
+  month: string; // New field to specify the month
+  year: number; // New field to specify the year
 }
 
 // Initialize projects without code snippets first
 export const projects: Project[] = [
   {
     id: 1,
+    month: "january",
+    year: 2025,
     name: "Animated Button",
     description: "Beautiful animated button components with hover animations",
     date: "2025-01-01",
@@ -32,6 +36,9 @@ export const projects: Project[] = [
   },
   {
     id: 2,
+
+    month: "january",
+    year: 2025,
     name: "Custom Checkbox",
     description:
       "Custom checkbox with custom colors and disabled state, accessible in forced colors mode as well.",
@@ -59,6 +66,9 @@ export const projects: Project[] = [
   },
   {
     id: 3,
+
+    month: "january",
+    year: 2025,
     name: "Toggle Switch",
     description:
       "Custom toggle switch with custom colors and disabled state, accessible in forced colors mode as well.",
@@ -79,6 +89,9 @@ export const projects: Project[] = [
   },
   {
     id: 4,
+
+    month: "january",
+    year: 2025,
     name: "Accordion Menu",
     description: "Accordion menu with multiple open and single open features",
     date: "2025-01-04",
@@ -95,6 +108,9 @@ export const projects: Project[] = [
   },
   {
     id: 5,
+
+    month: "january",
+    year: 2025,
     name: "Responsive Navbar",
     description: "Dynamic Responsive navbar with sticky ability",
     date: "2025-01-05",
@@ -112,6 +128,9 @@ export const projects: Project[] = [
   },
   {
     id: 6,
+
+    month: "january",
+    year: 2025,
     name: "Modal",
     description: "Modal with close button and overlay",
     date: "2025-01-06",
@@ -128,6 +147,9 @@ export const projects: Project[] = [
   },
   {
     id: 7,
+
+    month: "january",
+    year: 2025,
     name: "Tooltip",
     description: "Tooltip with custom colors and content features",
     date: "2025-01-07",
@@ -144,6 +166,9 @@ export const projects: Project[] = [
   },
   {
     id: 8,
+
+    month: "january",
+    year: 2025,
     name: "Progress Bar",
     description:
       "Progress bar with different colors for different progress level",
@@ -161,6 +186,9 @@ export const projects: Project[] = [
   },
   {
     id: 9,
+
+    month: "january",
+    year: 2025,
     name: "Tabs Component",
     description: "Tabs component like shadcnui",
     date: "2025-01-09",
@@ -177,6 +205,8 @@ export const projects: Project[] = [
   },
   {
     id: 10,
+    month: "january",
+    year: 2025,
     name: "Tabs Component 2 ",
     description: "Tabs component like shadcnui using React context",
     date: "2025-01-10",
@@ -193,6 +223,8 @@ export const projects: Project[] = [
   },
   {
     id: 11,
+    month: "january",
+    year: 2025,
     name: "Stars Component",
     description: "Star rating component allows full and half star rating both",
     date: "2025-01-11",
@@ -209,6 +241,8 @@ export const projects: Project[] = [
   },
   {
     id: 12,
+    month: "january",
+    year: 2025,
     name: "Image carousel",
     description: "Image carousel with autoplay and custom duration",
     date: "2025-01-12",
@@ -225,11 +259,13 @@ export const projects: Project[] = [
   },
   {
     id: 13,
+    month: "january",
+    year: 2025,
     name: "Accessible Dropdown Component",
     description:
       "A fully accessible, animated dropdown menu component with keyboard navigation, ARIA support, and mobile responsiveness",
     date: "2025-01-13",
-    category: "UI Components",
+    category: "Basic",
     component: "project13",
     image: "https://abhicdn.netlify.app/images/frontend-365-project13.png",
     resources: [
@@ -260,10 +296,12 @@ export const projects: Project[] = [
   },
   {
     id: 14,
+    month: "january",
+    year: 2025,
     name: "Search Suggestions",
     description: "Search suggestions with debounce and close on outside click",
     date: "2025-01-14",
-    category: "UI Components",
+    category: "Basic",
     component: "project14",
     image: "https://abhicdn.netlify.app/images/frontend-365-project14.png",
     resources: ["https://serpapi.com/google-autocomplete-api"],
@@ -278,10 +316,12 @@ export const projects: Project[] = [
   },
   {
     id: 15,
+    month: "january",
+    year: 2025,
     name: "Light/Dark Mode Toggle",
     description: "Toggle between light and dark mode",
     date: "2025-01-15",
-    category: "UI Components",
+    category: "Basic",
     component: "project15",
     image: "https://abhicdn.netlify.app/images/frontend-365-project15.png",
     resources: ["https://flowbite.com/docs/components/toggle/"],
@@ -294,10 +334,12 @@ export const projects: Project[] = [
   },
   {
     id: 16,
+    month: "january",
+    year: 2025,
     name: "Animated Loader",
     description: "Animated loader with customizable animation",
     date: "2025-01-16",
-    category: "UI Components",
+    category: "Basic",
     component: "project16",
     image: "https://abhicdn.netlify.app/images/frontend-365-project16.png",
     resources: ["https://uiverse.io/loaders/"],
@@ -307,10 +349,12 @@ export const projects: Project[] = [
   },
   {
     id: 17,
+    month: "january",
+    year: 2025,
     name: "Responsive Card",
     description: "Responsive card component with header, content and footer",
     date: "2025-01-17",
-    category: "UI Components",
+    category: "Basic",
     component: "project17",
     image: "https://abhicdn.netlify.app/images/frontend-365-project17.png",
     resources: ["https://ui.shadcn.com/docs/components/card"],
@@ -320,10 +364,12 @@ export const projects: Project[] = [
   },
   {
     id: 18,
+    month: "january",
+    year: 2025,
     name: "Stepper Component",
     description: "Stepper component with dynamic steps and active step",
     date: "2025-01-18",
-    category: "UI Components",
+    category: "Basic",
     component: "project18",
     image: "https://abhicdn.netlify.app/images/frontend-365-project18.png",
     resources: ["https://ui.shadcn.com/docs/components/stepper"],
@@ -333,10 +379,12 @@ export const projects: Project[] = [
   },
   {
     id: 19,
+    month: "january",
+    year: 2025,
     name: "Skeleton Loader",
     description: "Skeleton loader for loading state of the component",
     date: "2025-01-19",
-    category: "UI Components",
+    category: "Basic",
     component: "project19",
     image: "https://abhicdn.netlify.app/images/frontend-365-project19.png",
     resources: ["https://uiverse.io/loaders/"],
@@ -346,10 +394,12 @@ export const projects: Project[] = [
   },
   {
     id: 20,
+    month: "january",
+    year: 2025,
     name: "Sticky Header",
     description: "Sticky header component with dynamic content",
     date: "2025-01-20",
-    category: "UI Components",
+    category: "Basic",
     component: "project20",
     image: "https://abhicdn.netlify.app/images/frontend-365-project20.png",
     resources: ["https://ui.shadcn.com/docs/components/header"],
@@ -359,10 +409,12 @@ export const projects: Project[] = [
   },
   {
     id: 21,
+    month: "january",
+    year: 2025,
     name: "Password Stength Checker",
     description: "Password strength checker with dynamic feedback",
     date: "2025-01-21",
-    category: "UI Components",
+    category: "Basic",
     component: "project21",
     image: "https://abhicdn.netlify.app/images/frontend-365-project21.png",
     resources: ["https://ui.shadcn.com/docs/components/password-input"],
@@ -372,10 +424,12 @@ export const projects: Project[] = [
   },
   {
     id: 22,
+    month: "january",
+    year: 2025,
     name: "Circular Progress Bar",
     description: "Circular progress bar with dynamic animation",
     date: "2025-01-22",
-    category: "UI Components",
+    category: "Basic",
     component: "project22",
     image: "https://abhicdn.netlify.app/images/frontend-365-project22.png",
     resources: ["https://www.30secondsofcode.org/css/s/circular-progress-bar/"],
@@ -385,11 +439,13 @@ export const projects: Project[] = [
   },
   {
     id: 23,
+    month: "january",
+    year: 2025,
     name: "Custom Range Slider",
     description:
       "Custom range slider that can have dynamic minimum and maximum range values",
     date: "2025-01-23",
-    category: "UI Components",
+    category: "Basic",
     component: "project23",
     image: "https://abhicdn.netlify.app/images/frontend-365-project23.png",
     resources: ["https://overreacted.io/"],
@@ -401,10 +457,12 @@ export const projects: Project[] = [
   },
   {
     id: 24,
+    month: "january",
+    year: 2025,
     name: "Alert Component",
     description: "Alert component with different types of variants and types",
     date: "2025-01-24",
-    category: "UI Components",
+    category: "Basic",
     component: "project24",
     image: "https://abhicdn.netlify.app/images/frontend-365-project24.png",
     resources: ["https://mui.com/material-ui/react-alert/"],
@@ -419,11 +477,13 @@ export const projects: Project[] = [
   },
   {
     id: 25,
+    month: "january",
+    year: 2025,
     name: "Toast Message",
     description:
       "Toast message component with different types of variants and types",
     date: "2025-01-25",
-    category: "UI Components",
+    category: "Basic",
     component: "project25",
     image: "https://abhicdn.netlify.app/images/frontend-365-project25.png",
     resources: [
@@ -441,10 +501,12 @@ export const projects: Project[] = [
   },
   {
     id: 26,
+    month: "january",
+    year: 2025,
     name: "Digital Clock",
     description: "Digital clock component with beautiful design",
     date: "2025-01-26",
-    category: "UI Components",
+    category: "Basic",
     component: "project26",
     image: "https://abhicdn.netlify.app/images/frontend-365-project26.png",
     resources: ["https://www.w3schools.com/js/js_date_methods.asp"],
@@ -454,10 +516,12 @@ export const projects: Project[] = [
   },
   {
     id: 27,
+    month: "january",
+    year: 2025,
     name: "Stopwatch",
     description: "Stopwatch component with start, stop and reset functionality",
     date: "2025-01-27",
-    category: "UI Components",
+    category: "Basic",
     component: "project27",
     image: "https://abhicdn.netlify.app/images/frontend-365-project27.png",
     resources: ["https://www.w3schools.com/js/js_date_methods.asp"],
@@ -467,11 +531,13 @@ export const projects: Project[] = [
   },
   {
     id: 28,
+    month: "january",
+    year: 2025,
     name: "Countdown Timer",
     description:
       "Countdown timer component with with start, stop and reset functionality",
     date: "2025-01-28",
-    category: "UI Components",
+    category: "Basic",
     component: "project28",
     image: "https://abhicdn.netlify.app/images/frontend-365-project28.png",
     resources: ["https://www.w3schools.com/js/js_date_methods.asp"],
@@ -483,10 +549,12 @@ export const projects: Project[] = [
   },
   {
     id: 29,
+    month: "january",
+    year: 2025,
     name: "Weather Widget",
     description: "Weather widget component with current weather data",
     date: "2025-01-29",
-    category: "UI Components",
+    category: "Basic",
     component: "project29",
     image: "https://abhicdn.netlify.app/images/frontend-365-project29.png",
     resources: ["https://www.w3schools.com/js/js_date_methods.asp"],
@@ -496,10 +564,12 @@ export const projects: Project[] = [
   },
   {
     id: 30,
+    month: "january",
+    year: 2025,
     name: "Color Picker",
     description: "Color picker component with color selection",
     date: "2025-01-30",
-    category: "UI Components",
+    category: "Basic",
     component: "project30",
     image: "https://abhicdn.netlify.app/images/frontend-365-project30.png",
     resources: ["https://www.w3schools.com/js/js_date_methods.asp"],
@@ -509,10 +579,12 @@ export const projects: Project[] = [
   },
   {
     id: 31,
+    month: "january",
+    year: 2025,
     name: "Animated SVG Loader",
     description: "Animated SVG loader component with loading animation",
     date: "2025-01-31",
-    category: "UI Components",
+    category: "Basic",
     component: "project31",
     image: "https://abhicdn.netlify.app/images/frontend-365-project31.png",
     resources: ["https://www.svgbackgrounds.com/tag/yesvg/"],
@@ -521,3 +593,16 @@ export const projects: Project[] = [
     technologies: ["React", "TailwindCSS"],
   },
 ];
+
+export const getProjectsByMonthAndYear = (year: number, month: string) => {
+  return projects.filter(
+    project => project.year === year && project.month.toLowerCase() === month.toLowerCase()
+  );
+};
+
+// Get unique years and months
+export const getUniqueMonthsAndYears = () => {
+  const uniqueYears = [2025];
+  const uniqueMonths = ["january"];
+  return { years: uniqueYears, months: uniqueMonths };
+};

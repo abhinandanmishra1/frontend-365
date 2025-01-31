@@ -26,6 +26,8 @@ export async function GET(request: Request) {
   try {
     const { searchParams } = new URL(request.url);
     const projectId = searchParams.get('projectId');
+    const month = searchParams.get('month');
+    const year = searchParams.get('year');
 
     if (!projectId) {
       return NextResponse.json(
@@ -34,7 +36,7 @@ export async function GET(request: Request) {
       );
     }
 
-    const path = `projects/project${projectId}/index.tsx`;
+    const path = `projects/${year}/${month}/project${projectId}/index.tsx`;
     const code = await fetchGithubFile(path);
 
     return NextResponse.json({ code });

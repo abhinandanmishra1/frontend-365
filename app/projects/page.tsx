@@ -1,126 +1,237 @@
 "use client";
 
 import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+  Archive,
+  CalendarDays,
+  ChevronLeft,
+  Grid3x3,
+  LayoutGrid,
+  List
+} from 'lucide-react';
+import { Card, CardContent, CardHeader } from '@/components/ui/card';
+import React, { useState } from 'react';
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import { Suspense, useState } from "react";
-import { useRouter, useSearchParams } from "next/navigation";
+  SelectValue
+} from '@/components/ui/select';
+import { getUniqueMonthsAndYears, projects } from '@/projects/data';
 
-import { Button } from "@/components/ui/Button";
-import Link from "next/link";
-import { cn } from "@/lib/utils";
-import { projects } from "@/projects/data";
+import { Button } from '@/components/ui/Button';
+import Link from 'next/link';
+import { cn } from '@/lib/utils';
 
-interface ProjectProps {
-  filter: string;
-}
-const Projects = ({ filter }: ProjectProps) => {
-  const router = useRouter();
-  const searchParams = useSearchParams();
-  const page = parseInt(searchParams.get("page") ?? "1");
-  const projectsPerPage = 9;
+// View types for filtering
+type ViewType = 'grid' | 'list' | 'compact';
 
-  const filteredProjects =
-    filter === "All"
-      ? projects
-      : projects.filter((project) => project.category === filter);
+// Utility to capitalize first letter
+const capitalizeFirstLetter = (string: string) => 
+  string.charAt(0).toUpperCase() + string.slice(1);
 
-  const paginatedProjects = filteredProjects.slice(
-    (page - 1) * projectsPerPage,
-    page * projectsPerPage
-  );
+// Month Card Component
+const MonthCard: React.FC<{ 
+  month: string, 
+  year: number, 
+  projectCount: number 
+}> = ({ month, year, projectCount }) => {
   return (
-    <>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 p-8 xl:px-32 gap-6">
-        {paginatedProjects.map((project) => (
-          <Card key={project.id} className="overflow-hidden">
-            <CardHeader
-              style={{
-                backgroundImage: `url(${project.image})`,
-                backgroundSize: "300px 150px",
-                backgroundPosition: "center",
-                backgroundRepeat: "no-repeat",
-              }}
-              className={cn(`p-0 h-48 border-b`)}
-            ></CardHeader>
-            <CardContent className="p-4">
-              <div className="flex justify-between items-start mb-2">
-                <CardTitle>{project.name}</CardTitle>
-                <span className="text-xs text-muted-foreground">
-                  {new Date(project.date).toLocaleDateString("en-US", {
-                    year: "numeric",
-                    month: "short",
-                    day: "numeric",
-                  })}
-                </span>
-              </div>
-              <p className="text-sm text-muted-foreground line-clamp-1">
-                {project.description}
-              </p>
-            </CardContent>
-            <CardFooter>
-              <Button asChild className="w-full">
-                <Link href={`/projects/${project.id}`}>View Details</Link>
-              </Button>
-            </CardFooter>
-          </Card>
-        ))}
-      </div>
-      <div className="mt-8 flex justify-center space-x-2">
-        <Button
-          onClick={() => {
-            router.push(`/projects?page=${page - 1}`);
-          }}
-          disabled={page === 1}
-        >
-          Previous
-        </Button>
-        <Button
-          onClick={() => {
-            router.push(`/projects?page=${page + 1}`);
-          }}
-          disabled={page * projectsPerPage >= filteredProjects.length}
-        >
-          Next
-        </Button>
-      </div>
-    </>
+    <Link 
+      href={`/projects/${year}/${month.toLowerCase()}`}
+      className="relative group"
+    >
+      <Card 
+        className={cn(
+          "hover:shadow-lg transition-all duration-300 ease-in-out transform hover:-translate-y-2",
+          projectCount > 0 
+            ? "cursor-pointer hover:border-primary" 
+            : "opacity-50 cursor-not-allowed"
+        )}
+      >
+        <CardContent className="flex flex-col items-center justify-center p-6">
+          <div className="text-center">
+            <span className="text-2xl font-semibold text-foreground mb-3 block">
+              {capitalizeFirstLetter(month)}
+            </span>
+            <div 
+              className={cn(
+                "w-16 h-16 rounded-full flex items-center justify-center",
+                projectCount > 0 
+                  ? "bg-primary/10 text-primary" 
+                  : "bg-muted text-muted-foreground"
+              )}
+            >
+              <span className="text-2xl font-bold">{projectCount}</span>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
+    </Link>
+  );
+};
+
+// Year Card Component
+const YearCard: React.FC<{ 
+  year: number, 
+  totalProjects: number 
+}> = ({ year, totalProjects }) => {
+  return (
+    <Link 
+      href={`/projects/${year}`}
+      className="group"
+    >
+      <Card className="hover:shadow-lg transition-all duration-300 ease-in-out transform hover:-translate-y-2">
+        <CardHeader className="pb-0 pt-6 px-6 bg-secondary/30">
+          <div className="flex justify-between items-center">
+            <h2 className="text-3xl font-extrabold text-foreground">{year}</h2>
+            <Archive 
+              className="text-muted-foreground group-hover:text-primary transition-colors" 
+              size={24} 
+            />
+          </div>
+        </CardHeader>
+        <CardContent className="p-6 pt-4 flex flex-col items-center">
+          <div 
+            className="w-20 h-20 rounded-full flex items-center justify-center 
+            bg-primary/10 mb-3"
+          >
+            <span className="text-2xl font-bold text-primary">
+              {totalProjects}
+            </span>
+          </div>
+          <div className="text-sm text-muted-foreground">
+            Total Projects
+          </div>
+        </CardContent>
+      </Card>
+    </Link>
   );
 };
 
 export default function ProjectsPage() {
-  const [filter, setFilter] = useState("All");
+  const [view, setView] = useState<ViewType>('grid');
+  const [selectedYear, setSelectedYear] = useState<number | null>(null);
+
+  const { years } = getUniqueMonthsAndYears();
+
+  // Months with predefined order
+  const months = [
+    'january', 'february', 'march', 'april', 'may', 'june', 
+    'july', 'august', 'september', 'october', 'november', 'december'
+  ];
+
+  // Compute projects for each year and month
+  const yearProjectCounts = years.map(year => ({
+    year,
+    totalProjects: projects.filter(p => p.year === year).length
+  }));
+
+  // Compute month project counts for a specific year
+  const getMonthProjectCounts = (year: number) => 
+    months.map(month => ({
+      month,
+      projectCount: projects.filter(
+        p => p.year === year && p.month.toLowerCase() === month
+      ).length
+    }));
 
   return (
-    <div className="container mx-auto py-12">
-      <h1 className="text-3xl font-bold mb-8">Projects</h1>
-      <div className="mb-6">
-        <Select onValueChange={(value) => setFilter(value)}>
-          <SelectTrigger className="w-[180px]">
-            <SelectValue placeholder="Filter by category" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="All">All</SelectItem>
-            <SelectItem value="Basic">Basic</SelectItem>
-            <SelectItem value="Intermediate">Intermediate</SelectItem>
-            <SelectItem value="Advanced">Advanced</SelectItem>
-          </SelectContent>
-        </Select>
+    <div className="container mx-auto py-12 px-4 max-w-6xl">
+      <div className="flex justify-between items-center mb-10">
+        <div className="flex items-center space-x-4">
+          <CalendarDays className="text-primary" size={40} />
+          <div>
+            <h1 className="text-4xl font-extrabold text-foreground">
+              {selectedYear ? `${selectedYear} Projects` : 'Frontend 365 Projects'}
+            </h1>
+            {!selectedYear && (
+              <p className="text-muted-foreground">
+                Total Years: <span className="font-semibold text-foreground">{years.length}</span>
+              </p>
+            )}
+          </div>
+        </div>
+        
+        <div className="flex items-center space-x-4">
+          {/* View Type Selector */}
+          <Select 
+            value={view} 
+            onValueChange={(val: ViewType) => setView(val)}
+          >
+            <SelectTrigger className="w-[200px]">
+              <SelectValue placeholder="Select View">
+                {view === 'grid' && <Grid3x3 className="mr-2 inline-block" size={16} />}
+                {view === 'list' && <List className="mr-2 inline-block" size={16} />}
+                {view === 'compact' && <LayoutGrid className="mr-2 inline-block" size={16} />}
+                {capitalizeFirstLetter(view)} View
+              </SelectValue>
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="grid" className="cursor-pointer">
+                <div className="flex items-center">
+                  <Grid3x3 className="mr-2" size={16} /> Grid View
+                </div>
+              </SelectItem>
+              <SelectItem value="list" className="cursor-pointer">
+                <div className="flex items-center">
+                  <List className="mr-2" size={16} /> List View
+                </div>
+              </SelectItem>
+              <SelectItem value="compact" className="cursor-pointer">
+                <div className="flex items-center">
+                  <LayoutGrid className="mr-2" size={16} /> Compact View
+                </div>
+              </SelectItem>
+            </SelectContent>
+          </Select>
+
+          {/* Reset Button when a year is selected */}
+          {selectedYear && (
+            <Button 
+              variant="outline" 
+              onClick={() => setSelectedYear(null)}
+              className="flex items-center"
+            >
+              <ChevronLeft className="mr-2" size={16} /> Back to Years
+            </Button>
+          )}
+        </div>
       </div>
-      <Suspense fallback={<div>Loading...</div>}>
-        <Projects filter={filter} />
-      </Suspense>
+
+      {/* Year View */}
+      {!selectedYear && (
+        <div 
+          className={cn(
+            "grid gap-6",
+            view === 'grid' && "grid-cols-1 md:grid-cols-2 lg:grid-cols-3",
+            view === 'list' && "grid-cols-1",
+            view === 'compact' && "grid-cols-4"
+          )}
+        >
+          {yearProjectCounts.map(({ year, totalProjects }) => (
+            <YearCard 
+              key={year} 
+              year={year} 
+              totalProjects={totalProjects}
+            />
+          ))}
+        </div>
+      )}
+
+      {/* Month View */}
+      {selectedYear && (
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          {getMonthProjectCounts(selectedYear).map(({ month, projectCount }) => (
+            <MonthCard
+              key={month}
+              month={month}
+              year={selectedYear}
+              projectCount={projectCount}
+            />
+          ))}
+        </div>
+      )}
     </div>
   );
 }

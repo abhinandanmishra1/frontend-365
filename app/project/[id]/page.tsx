@@ -9,43 +9,58 @@ import {
 } from "@/components/ui/card";
 import { Check, Copy, Github } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
+import { useParams, useRouter, useSearchParams } from "next/navigation";
 
 import { Button } from "@/components/ui/Button";
 import Link from "next/link";
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import axios from "axios";
 import dynamic from "next/dynamic";
 import { getProject } from "@/lib/utils";
 import { oneDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
-import { useParams } from "next/navigation";
 
-async function getProjectCode(projectId: number) {
-  const response = await fetch(`/api/github/code?projectId=${projectId}`);
-  if (!response.ok) {
-    throw new Error("Failed to fetch code");
+async function getProjectCode(projectId: number, month: string, year: number) {
+  try {
+    const { data } = await axios.get(`/api/github/code`, {
+      params: {
+        projectId,
+        month,
+        year
+      }
+    });
+
+    return data.code;
   }
-  const data = await response.json();
-  return data.code;
+  catch (error) {
+    console.error(error);
+    return "No code available";
+  }
 }
 
 export default function ProjectDetailPage() {
   const params = useParams();
+  const projectId = Number(params.projectId);
+  const searchParams = useSearchParams();
+  const month = searchParams.get("month") ?? "january";
+  const year = parseInt(searchParams.get("year") ?? "2025");
+  
   const [project, setProject] = useState<any>(null);
   const [isCopied, setIsCopied] = useState(false);
   const [code, setCode] = useState<string>("");
 
   useEffect(() => {
     const loadData = async () => {
-      const data = await getProject(params.id as string);
+      const data = await getProject(params.id as string, month, year);
       setProject(data);
-      const codeData = await getProjectCode(data.id);
+      const codeData = await getProjectCode(data.id, month, year);
       setCode(codeData);
     };
     loadData();
-  }, [params.id]);
+  }, [params.id, month, year]);
 
   const ProjectComponent = useMemo(() => {
     return dynamic(
-      () => import(`@/projects/project${project?.id}`),
+      () => import(`@/projects/${year}/${month}/project${project?.id}`),
       {
         loading: () => <div>Loading...</div>,
         ssr: false,
@@ -101,7 +116,7 @@ export default function ProjectDetailPage() {
             </div>
             <div className="mt-4 space-x-4">
               <Button asChild>
-                <Link href={`/projects/${project.id}/live`}>
+                <Link href={`/project/${project.id}/live?year=${project.year}&month=${project.month}`}>
                   View Live Demo
                 </Link>
               </Button>
