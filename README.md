@@ -36,10 +36,10 @@ I’ll structure the suggestions by month to align with skill progression.
 31. Animated SVG Loader ✅
 
 **February**  
-1. Custom Editable Text Field (ShadCN Input)  
-2. Dynamic Table with Sort/Filter (ShadCN Table)  
-3. Custom File Upload Button  
-4. Multi-Select Dropdown (ShadCN Combobox)  
+1. Custom Editable Text Field (ShadCN Input) ✅
+2. Dynamic Table with Sort/Filter (ShadCN Table) 👨🏻
+3. Custom File Upload Button 👨🏻‍💻
+4. Multi-Select Dropdown (ShadCN Combobox) 👨🏻‍💻 
 5. Auto-Saving Input Field  
 6. Collapsible Sidebar (ShadCN Sheet)  
 7. Sticky Footer  
