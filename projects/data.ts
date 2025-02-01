@@ -592,11 +592,31 @@ export const projects: Project[] = [
     tags: [],
     technologies: ["React", "TailwindCSS"],
   },
+  {
+    id: 1,
+    month: "february",
+    year: 2025,
+    name: "Editable Textfield",
+    description: "Editable textfield component with text editing",
+    date: "2025-02-01",
+    category: "Basic",
+    component: "project31",
+    image: "https://abhicdn.netlify.app/images/frontend-365-project32.png",
+    resources: ["https://mayashavin.com/articles/build-accessibile-editable-text-field"],
+    features: [
+      "Editable textfield component with text editing",
+      "Dynamic component, responsive and accessible",
+    ],
+    tags: [],
+    technologies: ["React", "TailwindCSS"],
+  },
 ];
 
 export const getProjectsByMonthAndYear = (year: number, month: string) => {
   return projects.filter(
-    project => project.year === year && project.month.toLowerCase() === month.toLowerCase()
+    (project) =>
+      project.year === year &&
+      project.month.toLowerCase() === month.toLowerCase()
   );
 };
 
