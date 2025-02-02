@@ -610,6 +610,24 @@ export const projects: Project[] = [
     tags: [],
     technologies: ["React", "TailwindCSS"],
   },
+  {
+    id: 2,
+    month: "february",
+    year: 2025,
+    name: "Dynamic Table",
+    description: "Dynamic table component with sorting and pagination",
+    date: "2025-02-02",
+    category: "Basic",
+    component: "project33",
+    image: "https://abhicdn.netlify.app/images/frontend-365-project33.png",
+    resources: [""],
+    features: [
+      "Dynamic table component with sorting and pagination",
+      "Dynamic component, responsive and accessible",
+    ],
+    tags: [],
+    technologies: ["React", "TailwindCSS"],
+  }
 ];
 
 export const getProjectsByMonthAndYear = (year: number, month: string) => {
