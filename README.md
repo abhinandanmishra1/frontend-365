@@ -37,7 +37,7 @@ I’ll structure the suggestions by month to align with skill progression.
 
 **February**  
 1. Custom Editable Text Field (ShadCN Input) ✅
-2. Dynamic Table with Sort/Filter (ShadCN Table) 👨🏻
+2. Dynamic Table with Sort/Filter (ShadCN Table) ✅
 3. Custom File Upload Button 👨🏻‍💻
 4. Multi-Select Dropdown (ShadCN Combobox) 👨🏻‍💻 
 5. Auto-Saving Input Field  
