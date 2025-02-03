@@ -627,6 +627,24 @@ export const projects: Project[] = [
     ],
     tags: [],
     technologies: ["React", "TailwindCSS"],
+  },
+  {
+    id: 3,
+    month: "february",
+    year: 2025,
+    name: "Custon file upload input",
+    description: "Custom file upload input component with drag and drop",
+    date: "2025-02-03",
+    category: "Basic",
+    component: "project34",
+    image: "https://abhicdn.netlify.app/images/frontend-365-project34.png",
+    resources: [""],
+    features: [
+      "Custom file upload input component with drag and drop",
+      "Dynamic component, responsive and accessible",
+    ],
+    tags: [],
+    technologies: ["React", "TailwindCSS"],
   }
 ];
 
