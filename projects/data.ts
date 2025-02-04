@@ -645,6 +645,24 @@ export const projects: Project[] = [
     ],
     tags: [],
     technologies: ["React", "TailwindCSS"],
+  },
+  {
+    id: 4,
+    month: "february",
+    year: 2025,
+    name: "Multiselect dropdown",
+    description: "Multiselect dropdown component with search and select",
+    date: "2025-02-04",
+    category: "Basic",
+    component: "project35",
+    image: "https://abhicdn.netlify.app/images/frontend-365-project35.png",
+    resources: [""],
+    features: [
+      "Multiselect dropdown component with search and select",
+      "Dynamic component, responsive and accessible",
+    ],
+    tags: [],
+    technologies: ["React", "TailwindCSS"],
   }
 ];
 
