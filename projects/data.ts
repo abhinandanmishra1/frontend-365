@@ -663,6 +663,24 @@ export const projects: Project[] = [
     ],
     tags: [],
     technologies: ["React", "TailwindCSS"],
+  },
+  {
+    id: 5,
+    month: "february",
+    year: 2025,
+    name: "Autosave Input",
+    description: "Autosave input component with local storage save",
+    date: "2025-02-05",
+    category: "Basic",
+    component: "project36",
+    image: "https://abhicdn.netlify.app/images/frontend-365-project36.png",
+    resources: [""],
+    features: [
+      "Autosave input component with local storage save",
+      "Dynamic component, responsive and accessible",
+    ],
+    tags: [],
+    technologies: ["React", "TailwindCSS"],
   }
 ];
 
