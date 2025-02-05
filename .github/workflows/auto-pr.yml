@@ -1,0 +1,45 @@
+name: Auto PR and Tweet
+on:
+  push:
+    branches-ignore:
+      - main
+      - master
+jobs:
+  create-pr:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          
+      - name: Extract project info
+        id: project-info
+        run: |
+          # Extract project name from branch name
+          echo "PROJECT_NAME=$(echo ${{ github.ref_name }} | grep -oP 'project\d+')" >> $GITHUB_OUTPUT
+          
+          # Extract the main part of the commit message after "feat: "
+          echo "COMMIT_DESC=$(echo '${{ github.event.head_commit.message }}' | sed 's/^feat: //')" >> $GITHUB_OUTPUT
+          
+      - name: Create Pull Request
+        id: create-pr
+        uses: peter-evans/create-pull-request@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          title: 'Auto PR: ${{ github.ref_name }}'
+          body: |
+            Automated PR created from branch: ${{ github.ref_name }}
+            
+            Branch pushed by: ${{ github.actor }}
+            
+            ${{ steps.project-info.outputs.PROJECT_NAME }}: ${{ steps.project-info.outputs.COMMIT_DESC }}
+            Tech stack: React, Tailwindcss
+            
+            Changes included in this PR:
+            ${{ github.event.head_commit.message }}
+          base: main
+          branch: ${{ github.ref }}
+          draft: false
