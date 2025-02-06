@@ -42,10 +42,10 @@ I’ll structure the suggestions by month to align with skill progression.
 4. Multi-Select Dropdown (ShadCN Combobox) ✅
 5. Auto-Saving Input Field ✅
 6. Collapsible Sidebar (ShadCN Sidebar) ✅
-7. Sticky Footer 👨🏻‍💻
-8. Floating Action Button 👨🏻‍💻
-9. Flip Card Animation  
-10. Draggable List Items  
+7. Sticky Footer ✅
+8. Floating Action Button ✅
+9. Flip Card Animation 👨🏻‍💻
+10. Draggable List Items 👨🏻‍💻
 11. Custom Select Dropdown with Search (ShadCN Select)  
 12. Scroll Progress Indicator  
 13. Image Zoom on Hover  

@@ -702,6 +702,42 @@ export const projects: Project[] = [
     tags: [],
     technologies: ["React", "TailwindCSS"],
   },
+  {
+    id: 7,
+    month: "february",
+    year: 2025,
+    name: "Sticky Footer",
+    description: "Sticky footer component with dynamic content",
+    date: "2025-02-07",
+    category: "Basic",
+    component: "project38",
+    image: "https://abhicdn.netlify.app/images/frontend-365-project38.png",
+    resources: [""],
+    features: [
+      "Sticky footer component with dynamic content",
+      "Dynamic component, responsive and accessible",
+    ],
+    tags: [],
+    technologies: ["React", "TailwindCSS"],
+  },
+  {
+    id: 8,
+    month: "february",
+    year: 2025,
+    name: "Floating action button",
+    description: "Floating action button component with dynamic content",
+    date: "2025-02-08",
+    category: "Basic",
+    component: "project39",
+    image: "https://abhicdn.netlify.app/images/frontend-365-project39.png",
+    resources: ["https://m2.material.io/components/buttons-floating-action-button#anatomy"],
+    features: [
+      "Floating action button component with dynamic content",
+      "Dynamic component, responsive and accessible",
+    ],
+    tags: [],
+    technologies: ["React", "TailwindCSS"],
+  }
 ];
 
 export const getProjectsByMonthAndYear = (year: number, month: string) => {
