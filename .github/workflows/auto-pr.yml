@@ -19,7 +19,8 @@ jobs:
         id: project-info
         run: |
           # Extract project name from branch name
-          echo "PROJECT_NAME=$(echo ${{ github.ref_name }} | grep -oP 'project\d+')" >> $GITHUB_OUTPUT
+          PROJECT_NAME=$(echo "${{ github.ref_name }}" | grep -oP 'project\d+' | awk '{print toupper(substr($0,1,1)) tolower(substr($0,2))}')
+          echo "PROJECT_NAME=$PROJECT_NAME" >> $GITHUB_OUTPUT
           
           # Extract the main part of the commit message after "feat: "
           echo "COMMIT_DESC=$(echo '${{ github.event.head_commit.message }}' | sed 's/^feat: //')" >> $GITHUB_OUTPUT
@@ -29,17 +30,11 @@ jobs:
         uses: peter-evans/create-pull-request@v5
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          title: 'Auto PR: ${{ github.ref_name }}'
+          title: ${{ github.event.head_commit.message }}
           body: |
-            Automated PR created from branch: ${{ github.ref_name }}
-            
-            Branch pushed by: ${{ github.actor }}
-            
-            ${{ steps.project-info.outputs.PROJECT_NAME }}: ${{ steps.project-info.outputs.COMMIT_DESC }}
-            Tech stack: React, Tailwindcss
-            
-            Changes included in this PR:
-            ${{ github.event.head_commit.message }}
+            **${{ steps.project-info.outputs.PROJECT_NAME }}:** ${{ steps.project-info.outputs.COMMIT_DESC }}
+            **Tech stack:** React, Tailwindcss
+        
           base: main
           branch: ${{ github.ref }}
           draft: false
