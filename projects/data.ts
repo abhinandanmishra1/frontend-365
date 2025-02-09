@@ -775,6 +775,24 @@ export const projects: Project[] = [
     ],
     tags: [],
     technologies: ["React", "TailwindCSS"],
+  },
+  {
+    id: 11,
+    month: "february",
+    year: 2025,
+    name: "Custom Select Dropdown with Search",
+    description: "Custom select dropdown with search functionality",
+    date: "2025-02-11",
+    category: "Advanced",
+    component: "project42",
+    image: "https://abhicdn.netlify.app/images/frontend-365-project42.png",
+    resources: ["https://www.w3schools.com/howto/howto_custom_select.asp"],
+    features: [
+      "Custom select dropdown with search functionality",
+      "Dynamic component, responsive and accessible",
+    ],
+    tags: [],
+    technologies: ["React", "TailwindCSS"],
   }
 ];
 
