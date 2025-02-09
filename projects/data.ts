@@ -758,6 +758,24 @@ export const projects: Project[] = [
     tags: [],
     technologies: ["React", "TailwindCSS"],
   },
+  {
+    id: 10,
+    month: "february",
+    year: 2025,
+    name: "Draggable List",
+    description: "Draggable list component with beautiful animation",
+    date: "2025-02-10",
+    category: "Advanced",
+    component: "project41",
+    image: "https://abhicdn.netlify.app/images/frontend-365-project41.png",
+    resources: ["https://www.w3schools.com/howto/howto_css_draggable.asp"],
+    features: [
+      "Draggable list component with beautiful animation",
+      "Dynamic component, responsive and accessible",
+    ],
+    tags: [],
+    technologies: ["React", "TailwindCSS"],
+  }
 ];
 
 export const getProjectsByMonthAndYear = (year: number, month: string) => {
