@@ -45,10 +45,10 @@ I’ll structure the suggestions by month to align with skill progression.
 7. Sticky Footer ✅
 8. Floating Action Button ✅
 9. Flip Card Animation ✅
-10. Draggable List Items 👨🏻‍💻
-11. Custom Select Dropdown with Search (ShadCN Select) 👨🏻‍💻
-12. Scroll Progress Indicator  
-13. Image Zoom on Hover  
+10. Draggable List Items ✅
+11. Custom Select Dropdown with Search (ShadCN Select) ✅
+12. Scroll Progress Indicator 👨🏻‍💻
+13. Image Zoom on Hover 👨🏻‍💻 
 14. Inline Editable Table Row  
 15. Infinite Scroll List  
 16. Masonry Grid Layout  
@@ -69,3 +69,4 @@ I’ll structure the suggestions by month to align with skill progression.
 
 **March**
 -- To be continued...
+1. Draggable List Items - V2 (Smooth and better version)
