@@ -730,14 +730,34 @@ export const projects: Project[] = [
     category: "Basic",
     component: "project39",
     image: "https://abhicdn.netlify.app/images/frontend-365-project39.png",
-    resources: ["https://m2.material.io/components/buttons-floating-action-button#anatomy"],
+    resources: [
+      "https://m2.material.io/components/buttons-floating-action-button#anatomy",
+    ],
     features: [
       "Floating action button component with dynamic content",
       "Dynamic component, responsive and accessible",
     ],
     tags: [],
     technologies: ["React", "TailwindCSS"],
-  }
+  },
+  {
+    id: 9,
+    month: "february",
+    year: 2025,
+    name: "Flip card",
+    description: "Flip card component with beautiful animation",
+    date: "2025-02-09",
+    category: "Advanced",
+    component: "project40",
+    image: "https://abhicdn.netlify.app/images/frontend-365-project40.png",
+    resources: ["https://www.w3schools.com/howto/howto_css_flip_card.asp"],
+    features: [
+      "Flip card component with beautiful animation",
+      "Dynamic component, responsive and accessible",
+    ],
+    tags: [],
+    technologies: ["React", "TailwindCSS"],
+  },
 ];
 
 export const getProjectsByMonthAndYear = (year: number, month: string) => {
