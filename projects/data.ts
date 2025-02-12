@@ -793,6 +793,24 @@ export const projects: Project[] = [
     ],
     tags: [],
     technologies: ["React", "TailwindCSS"],
+  },
+  {
+    id: 12,
+    month:"february",
+    year: 2025,
+    name: "Scroll progress indicator",
+    description: "Scroll progress indicator component with beautiful animation",
+    date: "2025-02-12",
+    category: "Advanced",
+    component: "project43",
+    image: "https://abhicdn.netlify.app/images/frontend-365-project43.png",
+    resources: ["https://www.w3schools.com/howto/howto_js_progressbar.asp"],
+    features: [
+      "Scroll progress indicator component with beautiful animation",
+      "Dynamic component, responsive and accessible",
+    ],
+    tags: [],
+    technologies: ["React", "TailwindCSS"],
   }
 ];
 
