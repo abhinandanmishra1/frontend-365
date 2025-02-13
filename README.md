@@ -48,10 +48,10 @@ I’ll structure the suggestions by month to align with skill progression.
 10. Draggable List Items ✅
 11. Custom Select Dropdown with Search (ShadCN Select) ✅
 12. Scroll Progress Indicator ✅
-13. Image Zoom on Hover 👨🏻‍💻 
+13. Image Zoom on Hover ✅
 14. Inline Editable Table Row 👨🏻‍💻 
-15. Infinite Scroll List  
-16. Masonry Grid Layout  
+15. Infinite Scroll List 👨🏻‍💻 
+16. Masonry Grid Layout
 17. Image Comparison Slider  
 18. Scroll Snap Carousel  
 19. Timeline Component  

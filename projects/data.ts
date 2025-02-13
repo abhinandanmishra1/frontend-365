@@ -796,7 +796,7 @@ export const projects: Project[] = [
   },
   {
     id: 12,
-    month:"february",
+    month: "february",
     year: 2025,
     name: "Scroll progress indicator",
     description: "Scroll progress indicator component with beautiful animation",
@@ -811,7 +811,25 @@ export const projects: Project[] = [
     ],
     tags: [],
     technologies: ["React", "TailwindCSS"],
-  }
+  },
+  {
+    id: 13,
+    month: "february",
+    year: 2025,
+    name: "Image zoom on hover",
+    description: "Image zoom on hover component with beautiful animation",
+    date: "2025-02-13",
+    category: "Advanced",
+    component: "project44",
+    image: "https://abhicdn.netlify.app/images/frontend-365-project44.png",
+    resources: ["https://www.w3schools.com/howto/howto_js_image_zoom.asp"],
+    features: [
+      "Image zoom on hover component with beautiful animation",
+      "Dynamic component, responsive and accessible",
+    ],
+    tags: [],
+    technologies: ["React", "TailwindCSS"],
+  },
 ];
 
 export const getProjectsByMonthAndYear = (year: number, month: string) => {
