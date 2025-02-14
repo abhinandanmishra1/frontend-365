@@ -830,6 +830,27 @@ export const projects: Project[] = [
     tags: [],
     technologies: ["React", "TailwindCSS"],
   },
+  {
+    id: 14,
+    month: "february",
+    year: 2025,
+    name: "Inline Editable Table Row",
+    description: "Inline editable table row component",
+    date: "2025-02-14",
+    category: "Advanced",
+    component: "project45",
+    image: "https://abhicdn.netlify.app/images/frontend-365-project45.png",
+    resources: [
+      "https://www.w3schools.com/howto/howto_js_editable.asp",
+      "https://www.w3schools.com/howto/howto_js_editable.asp",
+    ],
+    features: [
+      "Inline editable table row component",
+      "Dynamic component, responsive and accessible",
+    ],
+    tags: [],
+    technologies: ["React", "TailwindCSS"],
+  }
 ];
 
 export const getProjectsByMonthAndYear = (year: number, month: string) => {
