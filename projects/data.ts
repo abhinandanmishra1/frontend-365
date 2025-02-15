@@ -850,6 +850,24 @@ export const projects: Project[] = [
     ],
     tags: [],
     technologies: ["React", "TailwindCSS"],
+  },
+  {
+    id: 15,
+    month: "february",
+    year: 2025,
+    name: "Infinite scroll list",
+    description: "Infinite scroll list component",
+    date: "2025-02-15",
+    category: "Advanced",
+    component: "project46",
+    image: "https://abhicdn.netlify.app/images/frontend-365-project46.png",
+    resources: ["https://blog.logrocket.com/infinite-scrolling-react/"],
+    features: [
+      "Infinite scroll list component",
+      "Dynamic component, responsive and accessible",
+    ],
+    tags: [],
+    technologies: ["React", "TailwindCSS"],
   }
 ];
 
