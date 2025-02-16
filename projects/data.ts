@@ -868,6 +868,24 @@ export const projects: Project[] = [
     ],
     tags: [],
     technologies: ["React", "TailwindCSS"],
+  },
+  {
+    id: 16,
+    month: "february",
+    year: 2025,
+    name: "Masonry Layout",
+    description: "Masonry layout component",
+    date: "2025-02-16",
+    category: "Advanced",
+    component: "project47",
+    image: "https://abhicdn.netlify.app/images/frontend-365-project47.png",
+    resources: ["https://dev.to/afif/finally-a-css-only-solution-to-create-masonry-layouts-1obh"],
+    features: [
+      "Masonry layout component",
+      "Dynamic component, responsive and accessible",
+    ],
+    tags: [],
+    technologies: ["React", "TailwindCSS"],
   }
 ];
 
