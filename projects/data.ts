@@ -886,6 +886,24 @@ export const projects: Project[] = [
     ],
     tags: [],
     technologies: ["React", "TailwindCSS"],
+  },
+  {
+    id: 17,
+    month: "february",
+    year: 2025,
+    name: "Image comparison slider",
+    description: "Image comparison slider component",
+    date: "2025-02-17",
+    category: "Advanced",
+    component: "project48",
+    image: "https://abhicdn.netlify.app/images/frontend-365-project48.png",
+    resources: ["https://www.npmjs.com/package/react-image-comparison-slider"],
+    features: [
+      "Image comparison slider component",
+      "Dynamic component, responsive and accessible",
+    ],
+    tags: [],
+    technologies: ["React", "TailwindCSS"],
   }
 ];
 
