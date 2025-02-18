@@ -1,45 +1,45 @@
-'use client';
+"use client";
 
-import { CalendarDays, Grid3x3, LayoutGrid, List } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import React, { useState } from 'react';
+import { CalendarDays, Grid3x3, LayoutGrid, List } from "lucide-react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import React, { useMemo, useState } from "react";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
-  SelectValue
-} from '@/components/ui/select';
+  SelectValue,
+} from "@/components/ui/select";
 
-import { Button } from '@/components/ui/button';
-import Link from 'next/link';
-import { cn } from '@/lib/utils';
-import { projects } from '@/projects/data';
-import { useParams } from 'next/navigation';
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { cn } from "@/lib/utils";
+import { getProjectsByYear } from "@/projects/data";
+import { useParams } from "next/navigation";
 
 // View types for filtering
-type ViewType = 'grid' | 'list' | 'compact';
+type ViewType = "grid" | "list" | "compact";
 
 // Utility to capitalize first letter
-const capitalizeFirstLetter = (string: string) => 
+const capitalizeFirstLetter = (string: string) =>
   string.charAt(0).toUpperCase() + string.slice(1);
 
 // Month Card Component
-const MonthCard: React.FC<{ 
-  month: string, 
-  year: number, 
-  projectCount: number 
+const MonthCard: React.FC<{
+  month: string;
+  year: number;
+  projectCount: number;
 }> = ({ month, year, projectCount }) => {
   return (
-    <Link 
+    <Link
       href={`/projects/${year}/${month.toLowerCase()}`}
       className="relative group"
     >
-      <Card 
+      <Card
         className={cn(
           "hover:shadow-lg transition-all duration-300 ease-in-out transform hover:-translate-y-2",
-          projectCount > 0 
-            ? "cursor-pointer hover:border-primary" 
+          projectCount > 0
+            ? "cursor-pointer hover:border-primary"
             : "opacity-50 cursor-not-allowed"
         )}
       >
@@ -48,11 +48,11 @@ const MonthCard: React.FC<{
             <span className="text-2xl font-semibold text-foreground mb-3 block">
               {capitalizeFirstLetter(month)}
             </span>
-            <div 
+            <div
               className={cn(
                 "w-16 h-16 rounded-full flex items-center justify-center",
-                projectCount > 0 
-                  ? "bg-primary/10 text-primary" 
+                projectCount > 0
+                  ? "bg-primary/10 text-primary"
                   : "bg-muted text-muted-foreground"
               )}
             >
@@ -68,26 +68,42 @@ const MonthCard: React.FC<{
 export default function YearProjectsPage() {
   const params = useParams();
   const year = parseInt(params.year as string);
-  const [view, setView] = useState<ViewType>('grid');
+  const [view, setView] = useState<ViewType>("grid");
+  const projects = getProjectsByYear(year);
 
   // Months with predefined order
   const months = [
-    'january', 'february', 'march', 'april', 'may', 'june', 
-    'july', 'august', 'september', 'october', 'november', 'december'
+    "january",
+    "february",
+    "march",
+    "april",
+    "may",
+    "june",
+    "july",
+    "august",
+    "september",
+    "october",
+    "november",
+    "december",
   ];
 
   // Compute month project counts for the specific year
-  const monthProjectCounts = months.map(month => ({
-    month,
-    projectCount: projects.filter(
-      p => p.year === year && p.month.toLowerCase() === month
-    ).length
-  }));
+  const monthProjectCounts = useMemo(() => {
+    return months.map((month) => ({
+      month,
+      projectCount: projects.filter(
+        (p) => p.year === year && p.month.toLowerCase() === month
+      ).length,
+    }));
+  }, [year, projects]);
 
   // Total projects for the year
-  const totalProjects = monthProjectCounts.reduce(
-    (sum, month) => sum + month.projectCount, 0
-  );
+  const totalProjects = useMemo(() => {
+    return monthProjectCounts.reduce(
+      (sum, month) => sum + month.projectCount,
+      0
+    );
+  }, [monthProjectCounts]);
 
   return (
     <div className="container mx-auto py-12 px-4 max-w-6xl">
@@ -98,20 +114,26 @@ export default function YearProjectsPage() {
             {year} Projects
           </h1>
           <p className="text-muted-foreground text-lg">
-            Total Projects: <span className="font-semibold text-foreground">{totalProjects}</span>
+            Total Projects:{" "}
+            <span className="font-semibold text-foreground">
+              {totalProjects}
+            </span>
           </p>
         </div>
-        
+
         <div className="flex items-center space-x-4">
-          <Select 
-            value={view} 
-            onValueChange={(val: ViewType) => setView(val)}
-          >
+          <Select value={view} onValueChange={(val: ViewType) => setView(val)}>
             <SelectTrigger className="w-[200px]">
               <SelectValue placeholder="Select View">
-                {view === 'grid' && <Grid3x3 className="mr-2 inline-block" size={16} />}
-                {view === 'list' && <List className="mr-2 inline-block" size={16} />}
-                {view === 'compact' && <LayoutGrid className="mr-2 inline-block" size={16} />}
+                {view === "grid" && (
+                  <Grid3x3 className="mr-2 inline-block" size={16} />
+                )}
+                {view === "list" && (
+                  <List className="mr-2 inline-block" size={16} />
+                )}
+                {view === "compact" && (
+                  <LayoutGrid className="mr-2 inline-block" size={16} />
+                )}
                 {capitalizeFirstLetter(view)} View
               </SelectValue>
             </SelectTrigger>
@@ -143,12 +165,12 @@ export default function YearProjectsPage() {
       </div>
 
       {/* Months View */}
-      <div 
+      <div
         className={cn(
           "grid gap-6 mb-10",
-          view === 'grid' && "grid-cols-2 md:grid-cols-3 lg:grid-cols-4",
-          view === 'list' && "grid-cols-1",
-          view === 'compact' && "grid-cols-6"
+          view === "grid" && "grid-cols-2 md:grid-cols-3 lg:grid-cols-4",
+          view === "list" && "grid-cols-1",
+          view === "compact" && "grid-cols-6"
         )}
       >
         {monthProjectCounts.map(({ month, projectCount }) => (
@@ -172,26 +194,33 @@ export default function YearProjectsPage() {
         <CardContent>
           <div className="grid md:grid-cols-3 gap-6">
             <div className="bg-secondary/30 p-4 rounded-lg">
-              <h3 className="text-lg font-semibold mb-2">Months with Projects</h3>
+              <h3 className="text-lg font-semibold mb-2">
+                Months with Projects
+              </h3>
               <p className="text-2xl font-bold text-primary">
-                {monthProjectCounts.filter(m => m.projectCount > 0).length}
+                {monthProjectCounts.filter((m) => m.projectCount > 0).length}
               </p>
             </div>
             <div className="bg-secondary/30 p-4 rounded-lg">
-              <h3 className="text-lg font-semibold mb-2">Most Productive Month</h3>
+              <h3 className="text-lg font-semibold mb-2">
+                Most Productive Month
+              </h3>
               <p className="text-2xl font-bold text-primary">
                 {(() => {
                   const mostProductiveMonth = monthProjectCounts.reduce(
-                    (max, month) => month.projectCount > max.projectCount ? month : max
+                    (max, month) =>
+                      month.projectCount > max.projectCount ? month : max
                   );
-                  return mostProductiveMonth.projectCount > 0 
-                    ? capitalizeFirstLetter(mostProductiveMonth.month) 
-                    : 'N/A';
+                  return mostProductiveMonth.projectCount > 0
+                    ? capitalizeFirstLetter(mostProductiveMonth.month)
+                    : "N/A";
                 })()}
               </p>
             </div>
             <div className="bg-secondary/30 p-4 rounded-lg">
-              <h3 className="text-lg font-semibold mb-2">Avg Projects per Month</h3>
+              <h3 className="text-lg font-semibold mb-2">
+                Avg Projects per Month
+              </h3>
               <p className="text-2xl font-bold text-primary">
                 {(totalProjects / 12).toFixed(1)}
               </p>
@@ -201,4 +230,4 @@ export default function YearProjectsPage() {
       </Card>
     </div>
   );
-};
+}

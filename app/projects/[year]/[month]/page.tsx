@@ -29,7 +29,6 @@ export default function MonthlyProjectsPage() {
 
   // Get all projects for the month and year
   const monthProjects = getProjectsByMonthAndYear(currentYear, month);
-  console.log(monthProjects)
   // Paginate projects
   const paginatedProjects = useMemo(() => {
     const startIndex = (page - 1) * ITEMS_PER_PAGE;
