@@ -21,11 +21,11 @@ export interface Project {
 export const projects: Project[] = [...januaryProjects, ...februaryProjects];
 
 export const getProjectsByMonthAndYear = (year: number, month: string) => {
-  console.log(projects);
   return projects.filter(
     (project) =>
       project.year === year &&
-      project.month.toLowerCase() === month.toLowerCase()
+      project.month.toLowerCase() === month.toLowerCase() &&
+      (process.env.NODE_ENV !== "production" || new Date(project.date) < new Date())
   );
 };
 
