@@ -29,6 +29,12 @@ export const getProjectsByMonthAndYear = (year: number, month: string) => {
   );
 };
 
+export const getProjectsByYear = (year: number) => {
+  return projects.filter(
+    (project) => project.year === year && (process.env.NODE_ENV !== "production" || new Date(project.date) < new Date())
+  );
+}
+
 // Get unique years and months
 export const getUniqueMonthsAndYears = () => {
   const uniqueYears = [2025];
