@@ -389,7 +389,6 @@ export const februaryProjects: Project[] = [
       "TailwindCSS",
       "ShadcnUI",
       "React Hook Form",
-      "Zod",
     ],
   },
   {
