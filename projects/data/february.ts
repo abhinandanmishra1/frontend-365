@@ -488,8 +488,8 @@ export const februaryProjects: Project[] = [
     id: 25,
     month: "february",
     year: 2025,
-    name: "Chat Bubble with Typing Indicator",
-    description: "Chat message component with typing animation",
+    name: "Chat with Typing Indicator",
+    description: "Chat message component with typing indicator animation",
     date: "2025-02-25",
     category: "Intermediate",
     component: "project56",
@@ -499,7 +499,6 @@ export const februaryProjects: Project[] = [
       "https://www.framer.com/motion/",
     ],
     features: [
-      "Chat bubble layout",
       "Typing indicator animation",
       "Message status",
       "Timestamp display",
