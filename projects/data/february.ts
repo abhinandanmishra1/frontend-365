@@ -556,7 +556,7 @@ export const februaryProjects: Project[] = [
     id: 28,
     month: "february",
     year: 2025,
-    name: "Custom Audio Player Controls",
+    name: "Custom Audio Player",
     description: "Audio player with custom controls and visualization",
     date: "2025-02-28",
     category: "Advanced",
@@ -565,6 +565,7 @@ export const februaryProjects: Project[] = [
     resources: [
       "https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API",
       "https://www.npmjs.com/package/react-h5-audio-player",
+      "https://blog.logrocket.com/building-audio-player-react/"
     ],
     features: [
       "Custom play/pause controls",
