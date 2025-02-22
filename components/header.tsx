@@ -1,13 +1,13 @@
 'use client'
 
 import Link from 'next/link'
+import { StreakCounter } from './streak-counter'
 import { usePathname } from 'next/navigation'
 import { useTheme } from 'next-themes'
 
 const Header = () => {
   const pathname = usePathname()
-  const { theme, setTheme } = useTheme()
-
+  const { theme, setTheme } = useTheme();
   return (
     <header className="sticky px-8 top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-14 items-center">
@@ -34,6 +34,8 @@ const Header = () => {
           <Moon className="absolute h-6 w-6 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
           <span className="sr-only">Toggle theme</span>
         </Button> */}
+
+        <StreakCounter />
       </div>
     </header>
   )
