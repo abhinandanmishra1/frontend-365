@@ -66,8 +66,40 @@ I’ll structure the suggestions by month to align with skill progression.
 28. Custom Audio Player Controls ✅
 
 **March**
--- To be continued...
-1. Draggable List Items - V2 (Smooth and better version) 👨🏻‍💻
+
+1. Draggable List Items V2 👨🏻‍💻  
 2. Video Player with Custom Controls 👨🏻‍💻  
-3. Heatmap Tooltip  
-4. Customizable Widget (ShadCN Card)
+3. Heatmap Tooltip 👨🏻‍💻  
+4. Customizable Widget (ShadCN Card) 👨🏻‍💻  
+5. Interactive Calendar  
+6. Multi-step Wizard  
+7. File Upload Zone  
+8. Image Gallery  
+9. Authentication Forms  
+10. Charts Dashboard  
+11. Kanban Board  
+12. Color Picker  
+13. Settings Panel  
+14. Notification Center  
+15. Comments Section  
+16. Music Player  
+17. Progress Tracker  
+18. Shopping Cart  
+19. Profile Card  
+20. Timeline View  
+21. Weather Widget  
+22. Survey Builder  
+23. Pricing Tables  
+24. Social Share  
+25. Rating System  
+26. Menu Builder  
+27. Code Editor  
+28. Dark Mode Toggle
+29. Pomodoro Timer  
+30. Expense Tracker  
+31. Quiz App  
+
+**April**
+1. Advanced Form Builder  
+2. Rich Text Editor  
+3. Data Grid Pro  
