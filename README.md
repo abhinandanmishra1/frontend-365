@@ -57,16 +57,49 @@ I’ll structure the suggestions by month to align with skill progression.
 19. Timeline Component ✅  
 20. Multi-Step Form with Validation (ShadCN Form) ✅  
 21. Resizable Panels (ShadCN Resizable) ✅  
-22. Kanban Board Column 👨🏻
-23. Code Editor with Syntax Highlighting 👨🏻‍💻 
-24. Drag-and-Drop File Uploader  
-25. Chat Bubble with Typing Indicator  
-26. Calendar Date Picker (ShadCN Calendar)  
-27. Custom Audio Player Controls  
-28. Video Player with Custom Controls  
-29. Heatmap Tooltip  
-30. Customizable Widget (ShadCN Card)
+22. Kanban Board Column ✅
+23. Code Editor with Syntax Highlighting ✅ 
+24. Drag-and-Drop File Uploader ✅ 
+25. Chat with Typing Indicator ✅   
+26. Calendar (ShadCN Calendar) ✅
+27. Calendar Date Picker (ShadCN DatePicker) ✅  
+28. Custom Audio Player Controls ✅
 
 **March**
--- To be continued...
-1. Draggable List Items - V2 (Smooth and better version)
+
+1. Draggable List Items V2 👨🏻‍💻  
+2. Video Player with Custom Controls 👨🏻‍💻  
+3. Heatmap Tooltip 👨🏻‍💻  
+4. Customizable Widget (ShadCN Card) 👨🏻‍💻  
+5. Interactive Calendar  
+6. Multi-step Wizard  
+7. File Upload Zone  
+8. Image Gallery  
+9. Authentication Forms  
+10. Charts Dashboard  
+11. Kanban Board  
+12. Color Picker  
+13. Settings Panel  
+14. Notification Center  
+15. Comments Section  
+16. Music Player  
+17. Progress Tracker  
+18. Shopping Cart  
+19. Profile Card  
+20. Timeline View  
+21. Weather Widget  
+22. Survey Builder  
+23. Pricing Tables  
+24. Social Share  
+25. Rating System  
+26. Menu Builder  
+27. Code Editor  
+28. Dark Mode Toggle
+29. Pomodoro Timer  
+30. Expense Tracker  
+31. Quiz App  
+
+**April**
+1. Advanced Form Builder  
+2. Rich Text Editor  
+3. Data Grid Pro  
