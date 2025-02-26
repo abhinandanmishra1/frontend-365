@@ -3,7 +3,7 @@ import { NextResponse } from 'next/server';
 async function fetchGithubFile(path: string) {
   const owner = 'abhinandanmishra1';
   const repo = 'frontend-365';
-  const branch = 'main';
+  const branch = process.env.BRANCH_NAME || 'main';
   
   const url = `https://api.github.com/repos/${owner}/${repo}/contents/${path}?ref=${branch}`;
   
