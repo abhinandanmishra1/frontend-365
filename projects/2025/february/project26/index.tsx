@@ -169,7 +169,7 @@ const CalendarMonthYear = ({
   );
 };
 
-const Calendar: React.FC<CalendarProps> = ({
+export const Calendar: React.FC<CalendarProps> = ({
   onDateSelect,
   initialDate = new Date(),
   views = ["day"],
