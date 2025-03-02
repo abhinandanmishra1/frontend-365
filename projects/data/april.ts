@@ -87,4 +87,27 @@ export const aprilProjects: Project[] = [
     tags: ["Charts", "Dashboard"],
     technologies: ["React", "TailwindCSS", "Recharts"],
   },
+  {
+    id: 5,
+    month: "april",
+    year: 2025,
+    name: "Heatmap Tooltip",
+    description: "Interactive heatmap with detailed tooltips",
+    date: "2025-04-05",
+    category: "Intermediate",
+    component: "project95",
+    image: "https://abhicdn.netlify.app/images/frontend-365-project95.png",
+    resources: [
+      "https://www.npmjs.com/package/react-tooltip",
+      "https://d3js.org/",
+    ],
+    features: [
+      "Data visualization",
+      "Interactive tooltips",
+      "Color gradient mapping",
+      "Responsive layout",
+    ],
+    tags: ["Visualization", "Heatmap"],
+    technologies: ["React", "TailwindCSS", "D3.js"],
+  },
 ];
