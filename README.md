@@ -70,9 +70,9 @@ I’ll structure the suggestions by month to align with skill progression.
 1. Draggable List Items V2 ✅ 
 2. Custom Slider ✅
 3. Video Player with Custom Controls ✅ 
-4. Customizable Widget (ShadCN Card) 👨🏻‍💻  
-5. Interactive Calendar  
-6. Multi-step Wizard  
+4. Badge Component ✅  
+5. Avatar Component 👨🏻‍💻
+6. Avatar with Badge component 👨🏻‍💻
 7. File Upload Zone
 8. Image Gallery  
 9. Authentication Forms  
@@ -104,3 +104,5 @@ I’ll structure the suggestions by month to align with skill progression.
 2. Rich Text Editor  
 3. Data Grid Pro  
 4. Heatmap Tooltip
+5. Multi-step Wizard 
+6. Interactive Calendar
