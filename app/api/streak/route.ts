@@ -7,16 +7,13 @@ export async function GET(request: Request) {
 
   try {
     const items = await Streak.find({});
-    return (
-      NextResponse
-        .json({
-          success: true,
-          count: items.length,
-          isTodayMarked: items.some(
-            (item) => item.date.toDateString() === new Date().toDateString()
-          ),
-        })
-    );
+    return NextResponse.json({
+      success: true,
+      count: items.length,
+      isTodayMarked: items.some(
+        (item) => item.date.toDateString() === new Date().toDateString()
+      ),
+    });
   } catch (error) {
     return NextResponse.json({ success: false });
   }
@@ -24,15 +21,19 @@ export async function GET(request: Request) {
 
 export async function POST(request: Request) {
   await dbConnect();
+  const getDate = (date: Date) => date.toISOString().split("T")[0];
+  const today = getDate(new Date());
 
-  const today = new Date().toDateString();
   try {
     const isTodayMarked = await Streak.findOne({
       date: today,
     });
 
     if (isTodayMarked) {
-      return NextResponse.json({ success: false, message: "Already marked today" });
+      return NextResponse.json({
+        success: false,
+        message: "Already marked today",
+      });
     }
 
     const item = await Streak.create({

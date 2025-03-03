@@ -2,7 +2,8 @@ import mongoose from 'mongoose';
 
 const StreakSchema = new mongoose.Schema({
   date: {
-    type: Date,
+    type: String,
+    unique: true,
     required: true,
   },
 });
