@@ -7,13 +7,15 @@ export async function GET(request: Request) {
 
   try {
     const items = await Streak.find({});
-    return NextResponse.json({
+    const response = {
       success: true,
       count: items.length,
       isTodayMarked: items.some(
-        (item) => item.date.toDateString() === new Date().toDateString()
+        (item) => new Date(item.date).toDateString() === new Date().toDateString()
       ),
-    });
+    };
+
+    return NextResponse.json(response);
   } catch (error) {
     return NextResponse.json({ success: false });
   }
