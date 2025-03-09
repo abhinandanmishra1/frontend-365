@@ -76,32 +76,32 @@ I’ll structure the suggestions by month to align with skill progression.
 7. File Upload Zone ✅
 8. Testimonial Card ✅ 
 9. Authentication Forms ✅  
-10. Charts Dashboard 👨🏻‍💻  
-11. Kanban Board 👨🏻‍💻  
-12. Color Picker  
-13. Settings Panel  
-14. Notification Center  
-15. Comments Section  
-16. Music Player  
-17. Progress Tracker  
-18. Shopping Cart  
+10. Password Input 👨🏻‍💻  
+11. Pagination Items 👨🏻‍💻
+12. Pin Input 
+13. Popover  
+14. Radio Card 
+15. Tag 
+16. Textarea 
+17. Tooltip  
+18. Toggle Tip  
 19. Profile Card  
 20. Timeline View  
-21. Weather Widget  
-22. Survey Builder  
-23. Pricing Tables  
+21. Email Input  
+22. Number Input 
+23. Breadcrumb 
 24. Social Share  
-25. Rating System  
+25. Social profiles links
 26. Menu Builder  
-27. Code Editor  
-28. Dark Mode Toggle
-29. Pomodoro Timer  
-30. Expense Tracker  
-31. Quiz App  
+27. Quiz component  
+28. QR Code component
+29. Github user search app  
+30. Password generator app  
+31. Interactive rating component  
 
 **April**
 1. Advanced Form Builder  
-2. Rich Text Editor  
+2. In-browser markdown editor  
 3. Data Grid Pro  
 4. Heatmap Tooltip
 5. Multi-step Wizard 
