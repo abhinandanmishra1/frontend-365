@@ -23,6 +23,7 @@
     "axios": "^1.7.9",
     "class-variance-authority": "^0.6.1",
     "clsx": "^1.2.1",
+    "framer-motion": "^12.4.10",
     "lucide-react": "^0.474.0",
     "mongoose": "^8.10.1",
     "next": "15.0.0",
