@@ -68,14 +68,12 @@ const ProfileCard = ({
 
 export default function Project19() {
     return (
-        <div className="max-w-7xl mx-auto p-4 pt-6 bg-gradient-to-br from-cyan-500 to-cyan-700 min-h-screen flex flex-col items-center justify-center">
-            <h1 className="text-3xl font-bold text-white mb-8">Project 19: Profile Card</h1>
-            
+        <div className="max-w-7xl mx-auto p-4 pt-6 bg-gradient-to-br from-cyan-500 to-cyan-700 h-[50vh] flex flex-col items-center justify-center">
             <ProfileCard 
-                name="Victor Crest"
-                age={26}
-                location="London"
-                profilePicture="/api/placeholder/200/200" // Using placeholder as we can't use external images
+                name="Abhinandan Mishra"
+                age={23}
+                location="India"
+                profilePicture="https://avatars.githubusercontent.com/u/64205626?v=4" // Using placeholder as we can't use external images
                 followers={80000}
                 likes={803000}
                 photosCount={1400}
