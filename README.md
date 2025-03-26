@@ -92,11 +92,11 @@ I’ll structure the suggestions by month to align with skill progression.
 23. Breadcrumb ✅
 24. Social Share ✅  
 25. Social profiles links ✅
-26. Menu Builder 👨🏻‍💻  
-27. Quiz component  
+26. Password generator app ✅  
+27. Quiz component 👨🏻‍💻 
 28. QR Code component
 29. Github user search app  
-30. Password generator app  
+30. Menu Builder
 31. Interactive rating component  
 
 **April**
