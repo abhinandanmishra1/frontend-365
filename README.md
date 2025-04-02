@@ -1,5 +1,5 @@
 List of 365 UI component ideas that gradually increase in complexity and involve good logic or creativity. 
-I’ll structure the suggestions by month to align with skill progression.
+I’ll structure the suggestions by month to align with skill progression
 
 ### **Projects by Month**
 **January**  
