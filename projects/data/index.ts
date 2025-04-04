@@ -1,3 +1,4 @@
+import { aprilProjects } from "./april";
 import { februaryProjects } from "./february";
 import { januaryProjects } from "./january";
 import { marchProjects } from "./march";
@@ -23,6 +24,7 @@ export const projects: Project[] = [
   ...januaryProjects,
   ...februaryProjects,
   ...marchProjects,
+  ...aprilProjects
 ];
 
 export const getProjectsByMonthAndYear = (year: number, month: string) => {
