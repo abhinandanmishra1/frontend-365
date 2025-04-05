@@ -3,6 +3,7 @@ import { aprilProjects } from "./april";
 import { februaryProjects } from "./february";
 import { januaryProjects } from "./january";
 import { marchProjects } from "./march";
+export * from "./types";
 
 // Initialize projects without code snippets first
 export const projects: Project[] = [
