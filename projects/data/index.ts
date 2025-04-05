@@ -1,23 +1,8 @@
+import { Project } from "./types";
 import { aprilProjects } from "./april";
 import { februaryProjects } from "./february";
 import { januaryProjects } from "./january";
 import { marchProjects } from "./march";
-
-export interface Project {
-  id: number; // Changed to string for month-based identification
-  name: string;
-  description: string;
-  date: string;
-  category: "Basic" | "Intermediate" | "Advanced";
-  image: string;
-  resources: string[];
-  features: string[];
-  tags: string[];
-  technologies: string[];
-  component: string;
-  month: string; // New field to specify the month
-  year: number; // New field to specify the year
-}
 
 // Initialize projects without code snippets first
 export const projects: Project[] = [
