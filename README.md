@@ -101,7 +101,7 @@ I’ll structure the suggestions by month to align with skill progression
 
 **April**  
 1. Hoverable Dropdown Grid ✅  
-2. Animated Hamburger Menu   
+2. Animated Hamburger Menu ✅   
 3. Custom Radio  
 4. Swipeable  
 5. Dynamic Breadcrumbs 
