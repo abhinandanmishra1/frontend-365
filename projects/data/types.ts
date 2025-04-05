@@ -3,7 +3,7 @@ export interface Project {
   name: string;
   description: string;
   date: string;
-  category: "Basic" | "Intermediate" | "Advanced";
+  category?: "Basic" | "Intermediate" | "Advanced" | string;
   image: string;
   resources: string[];
   features: string[];
