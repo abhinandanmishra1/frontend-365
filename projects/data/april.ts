@@ -145,7 +145,7 @@ export const aprilProjects: Project[] = [
     id: 8,
     month: "april",
     year: 2025,
-    name: "Animated Counter",
+    name: "Rolling Number",
     description: "Number roll-up effect for statistics and metrics displays",
     date: "2025-04-08",
     category: "UI Elements",
