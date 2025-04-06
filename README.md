@@ -105,7 +105,7 @@ I’ll structure the suggestions by month to align with skill progression
 3. Custom Radio ✅  
 4. Swipeable ✅  
 5. Dynamic Breadcrumbs ✅ 
-6. Tag Input Field   
+6. Tag Input Field ✅   
 7. Range Slider with Dual Thumbs   
 8. Animated Counter  roll  
 9. Context Menu   
